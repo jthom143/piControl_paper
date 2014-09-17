@@ -20,6 +20,7 @@ clear all
 addpath /home/jthom143/NCEPReanalysis1
 addpath /home/jthom143/NCEPReanalysis2
 addpath /data1/fesd1/jthom143/piControl_paper/windstress_analysis
+addpath /data1/fesd1/jthom143/piControl_paper/tools
 
 %% Trend Analysis
 
