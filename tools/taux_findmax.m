@@ -11,28 +11,18 @@ function [ jet_mon, lat_jet_mon, y_mon, jet_ann, lat_jet_ann ] = taux_findmax( t
 
 %% Maximum Wind Stress for Monthly Data 
 
-% Zonal Average Monthly Data 
+% Zonally averaged wind stress between 40-60
 
 taux_zonalavg = squeeze(nanmean(taux_mon));
-
-% Fit cubic function to the monthly wind stress data 
 
 lat_30 = findnearest(-30,lat);
 lat_70 = findnearest(-70,lat);
 
 lat1 = lat(lat_70:lat_30,:);
 
-taux_zonalavg_window  = taux_zonalavg(lat_70:lat_30,:);        % Zonally averaged wind stress between 40-60
+taux_zonalavg_window  = taux_zonalavg(lat_70:lat_30,:); 
 
-y_mon = -9999*ones(length(lat1),length(time_month));
-
-for i = 1:length(time_month)
-    [p,s,mu] = polyfit(lat1, squeeze(taux_zonalavg_window(:,i)), 3); 
-    
-    y_mon(:,i) = polyval(p, lat1, s, mu);
-end
-
-% Interpolate Polynomial to 0.1 meridional grid: 
+% Interpolate Windstress to 0.1 meridional grid: 
 
 lat_new = lat(1):0.1:lat(length(lat));
 lat_new = lat_new';
@@ -42,11 +32,12 @@ lat_70 = findnearest(-70,lat_new);
 lat_new = lat_new(lat_70:lat_30);
 
 
-y_mon_new = interp1(lat1, y_mon, lat_new, 'cubic');
+y_mon = interp1(lat1, taux_zonalavg_window, lat_new, 'cubic');
+
 
 % Find Maximum Wind Stress Value and Location 
 
-[jet_mon, jet_loc_mon] = max(y_mon_new, [], 1);
+[jet_mon, jet_loc_mon] = max(y_mon, [], 1);
 lat_jet_mon = lat_new(jet_loc_mon)';
 
 
