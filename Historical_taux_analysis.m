@@ -10,8 +10,8 @@
 
 %% Matlab Housekeeping 
 
-close all
-clear all
+% close all
+% clear all
 
 addpath /data1/fesd1/jthom143/piControl_paper/tools 
 addpath /data1/fesd1/jthom143/piControl_paper/HistoricalData
