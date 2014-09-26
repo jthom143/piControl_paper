@@ -40,7 +40,8 @@ plot(can_esm2_time_year, can_esm2_jet_DJF, 'linewidth', 2)
 xlabel('Time (years)', 'fontsize', fontsize)
 ylabel('Windstress Magnitude (Pa)', 'fontsize', fontsize)
 title('CanESM2 Historical Jet DJF Timeseries', 'fontsize', fontsize+4)
-ylim([1850 2010])
+xlim([1850 2010])
+ylim([0.13 0.23])
 h1 = hline(mean(can_esm2_jet_DJF(1:100)));
 
 set(h1, 'linestyle', '--', 'linewidth', 2, 'color', 'k')
@@ -61,7 +62,8 @@ plot(ccsm4_time_year, ccsm4_jet_DJF, 'linewidth', 2)
 xlabel('Time (years)', 'fontsize', fontsize)
 ylabel('Windstress Magnitude (Pa)', 'fontsize', fontsize)
 title('CCSM4 Historical Jet DJF Timeseries', 'fontsize', fontsize+4)
-ylim([1850 2010])
+xlim([1850 2010])
+ylim([0.13 0.23])
 h1 = hline(mean(ccsm4_jet_DJF(1:100)));
 
 set(h1, 'linestyle', '--', 'linewidth', 2, 'color', 'k')
@@ -83,7 +85,8 @@ plot(cmcc_cesm_time_year, cmcc_cesm_jet_DJF, 'linewidth', 2)
 xlabel('Time (years)', 'fontsize', fontsize)
 ylabel('Windstress Magnitude (Pa)', 'fontsize', fontsize)
 title('CMCC CESM Historical Jet DJF Timeseries', 'fontsize', fontsize+4)
-ylim([1850 2010])
+xlim([1850 2010])
+ylim([0.13 0.23])
 h1 = hline(mean(cmcc_cesm_jet_DJF(1:100)));
 
 set(h1, 'linestyle', '--', 'linewidth', 2, 'color', 'k')
@@ -105,7 +108,8 @@ plot(cmcc_cm_time_year, cmcc_cm_jet_DJF, 'linewidth', 2)
 xlabel('Time (years)', 'fontsize', fontsize)
 ylabel('Windstress Magnitude (Pa)', 'fontsize', fontsize)
 title('CMCC CM Historical Jet DJF Timeseries', 'fontsize', fontsize+4)
-ylim([1850 2010])
+xlim([1850 2010])
+ylim([0.13 0.23])
 h1 = hline(mean(cmcc_cm_jet_DJF(1:100)));
 
 set(h1, 'linestyle', '--', 'linewidth', 2, 'color', 'k')
@@ -127,7 +131,8 @@ plot(cmcc_cms_time_year, cmcc_cms_jet_DJF, 'linewidth', 2)
 xlabel('Time (years)', 'fontsize', fontsize)
 ylabel('Windstress Magnitude (Pa)', 'fontsize', fontsize)
 title('CMCC CMs Historical Jet DJF Timeseries', 'fontsize', fontsize+4)
-ylim([1850 2010])
+xlim([1850 2010])
+ylim([0.13 0.23])
 h1 = hline(mean(cmcc_cms_jet_DJF(1:100)));
 
 set(h1, 'linestyle', '--', 'linewidth', 2, 'color', 'k')
@@ -149,7 +154,8 @@ plot(cnrm_cm5_time_year, cnrm_cm5_jet_DJF, 'linewidth', 2)
 xlabel('Time (years)', 'fontsize', fontsize)
 ylabel('Windstress Magnitude (Pa)', 'fontsize', fontsize)
 title('CNRM CM5 Historical Jet DJF Timeseries', 'fontsize', fontsize+4)
-ylim([1850 2010])
+xlim([1850 2010])
+ylim([0.13 0.23])
 h1 = hline(mean(cnrm_cm5_jet_DJF(1:100)));
 
 set(h1, 'linestyle', '--', 'linewidth', 2, 'color', 'k')
@@ -171,7 +177,8 @@ plot(gfdl_esm2g_time_year, gfdl_esm2g_jet_DJF, 'linewidth', 2)
 xlabel('Time (years)', 'fontsize', fontsize)
 ylabel('Windstress Magnitude (Pa)', 'fontsize', fontsize)
 title('GFDL ESM2G Historical Jet DJF Timeseries', 'fontsize', fontsize+4)
-ylim([1850 2010])
+xlim([1850 2010])
+ylim([0.13 0.23])
 h1 = hline(mean(gfdl_esm2g_jet_DJF(1:100)));
 
 set(h1, 'linestyle', '--', 'linewidth', 2, 'color', 'k')
@@ -193,7 +200,8 @@ plot(gfdl_esm2m_time_year, gfdl_esm2m_jet_DJF, 'linewidth', 2)
 xlabel('Time (years)', 'fontsize', fontsize)
 ylabel('Windstress Magnitude (Pa)', 'fontsize', fontsize)
 title('GFDL ESM2M Historical Jet DJF Timeseries', 'fontsize', fontsize+4)
-ylim([1850 2010])
+xlim([1850 2010]) 
+ylim([0.13 0.23])
 h1 = hline(mean(gfdl_esm2m_jet_DJF(1:100)));
 
 set(h1, 'linestyle', '--', 'linewidth', 2, 'color', 'k')
@@ -215,7 +223,8 @@ plot(ipsl_cm5a_lr_time_year, ipsl_cm5a_lr_jet_DJF, 'linewidth', 2)
 xlabel('Time (years)', 'fontsize', fontsize)
 ylabel('Windstress Magnitude (Pa)', 'fontsize', fontsize)
 title('IPSL CM5a LR Historical Jet DJF Timeseries', 'fontsize', fontsize+4)
-ylim([1850 2010])
+xlim([1850 2010]) 
+ylim([0.13 0.23])
 h1 = hline(mean(ipsl_cm5a_lr_jet_DJF(1:100)));
 
 set(h1, 'linestyle', '--', 'linewidth', 2, 'color', 'k')
@@ -237,7 +246,8 @@ plot(ipsl_cm5a_mr_time_year, ipsl_cm5a_mr_jet_DJF, 'linewidth', 2)
 xlabel('Time (years)', 'fontsize', fontsize)
 ylabel('Windstress Magnitude (Pa)', 'fontsize', fontsize)
 title('IPSL CM5a MR Historical Jet DJF Timeseries', 'fontsize', fontsize+4)
-ylim([1850 2010])
+xlim([1850 2010]) 
+ylim([0.13 0.23])
 h1 = hline(mean(ipsl_cm5a_mr_jet_DJF(1:100)));
 
 set(h1, 'linestyle', '--', 'linewidth', 2, 'color', 'k')
@@ -259,7 +269,8 @@ plot(ipsl_cm5b_lr_time_year, ipsl_cm5b_lr_jet_DJF, 'linewidth', 2)
 xlabel('Time (years)', 'fontsize', fontsize)
 ylabel('Windstress Magnitude (Pa)', 'fontsize', fontsize)
 title('IPSL CM5b LR Historical Jet DJF Timeseries', 'fontsize', fontsize+4)
-ylim([1850 2010])
+xlim([1850 2010]) 
+ylim([0.13 0.23])
 h1 = hline(mean(ipsl_cm5b_lr_jet_DJF(1:100)));
 
 set(h1, 'linestyle', '--', 'linewidth', 2, 'color', 'k')
@@ -281,7 +292,8 @@ plot(miroc_esm_time_year, miroc_esm_jet_DJF, 'linewidth', 2)
 xlabel('Time (years)', 'fontsize', fontsize)
 ylabel('Windstress Magnitude (Pa)', 'fontsize', fontsize)
 title('MIROC ESM Historical Jet DJF Timeseries', 'fontsize', fontsize+4)
-ylim([1850 2010])
+xlim([1850 2010]) 
+ylim([0.13 0.23])
 h1 = hline(mean(miroc_esm_jet_DJF(1:100)));
 
 set(h1, 'linestyle', '--', 'linewidth', 2, 'color', 'k')
@@ -303,7 +315,8 @@ plot(miroc_esm_chem_time_year, miroc_esm_chem_jet_DJF, 'linewidth', 2)
 xlabel('Time (years)', 'fontsize', fontsize)
 ylabel('Windstress Magnitude (Pa)', 'fontsize', fontsize)
 title('MIROC ESM CHEM Historical Jet DJF Timeseries', 'fontsize', fontsize+4)
-ylim([1850 2010])
+xlim([1850 2010]) 
+ylim([0.13 0.23])
 h1 = hline(mean(miroc_esm_chem_jet_DJF(1:100)));
 
 set(h1, 'linestyle', '--', 'linewidth', 2, 'color', 'k')
@@ -325,7 +338,8 @@ plot(miroc5_time_year, miroc5_jet_DJF, 'linewidth', 2)
 xlabel('Time (years)', 'fontsize', fontsize)
 ylabel('Windstress Magnitude (Pa)', 'fontsize', fontsize)
 title('MIROC5 Historical Jet DJF Timeseries', 'fontsize', fontsize+4)
-ylim([1850 2010])
+xlim([1850 2010])
+ylim([0.13 0.23])
 h1 = hline(mean(miroc5_jet_DJF(1:100)));
 
 set(h1, 'linestyle', '--', 'linewidth', 2, 'color', 'k')
@@ -347,7 +361,8 @@ plot(mpi_esm_lr_time_year, mpi_esm_lr_jet_DJF, 'linewidth', 2)
 xlabel('Time (years)', 'fontsize', fontsize)
 ylabel('Windstress Magnitude (Pa)', 'fontsize', fontsize)
 title('MPI ESM LR Historical Jet DJF Timeseries', 'fontsize', fontsize+4)
-ylim([1850 2010])
+xlim([1850 2010])
+ylim([0.13 0.23])
 h1 = hline(mean(mpi_esm_lr_jet_DJF(1:100)));
 
 set(h1, 'linestyle', '--', 'linewidth', 2, 'color', 'k')
@@ -369,7 +384,8 @@ plot(mpi_esm_mr_time_year, mpi_esm_mr_jet_DJF, 'linewidth', 2)
 xlabel('Time (years)', 'fontsize', fontsize)
 ylabel('Windstress Magnitude (Pa)', 'fontsize', fontsize)
 title('MPI ESM MR Historical Jet DJF Timeseries', 'fontsize', fontsize+4)
-ylim([1850 2010])
+xlim([1850 2010])
+ylim([0.13 0.23])
 h1 = hline(mean(mpi_esm_mr_jet_DJF(1:100)));
 
 set(h1, 'linestyle', '--', 'linewidth', 2, 'color', 'k')
@@ -391,7 +407,8 @@ plot(mri_cgcm3_time_year, mri_cgcm3_jet_DJF, 'linewidth', 2)
 xlabel('Time (years)', 'fontsize', fontsize)
 ylabel('Windstress Magnitude (Pa)', 'fontsize', fontsize)
 title('MRI CGCM3 Historical Jet DJF Timeseries', 'fontsize', fontsize+4)
-ylim([1850 2010])
+xlim([1850 2010])
+ylim([0.13 0.23])
 h1 = hline(mean(mri_cgcm3_jet_DJF(1:100)));
 
 set(h1, 'linestyle', '--', 'linewidth', 2, 'color', 'k')
@@ -413,7 +430,8 @@ plot(nor_esm1m_me_time_year, nor_esm1m_me_jet_DJF, 'linewidth', 2)
 xlabel('Time (years)', 'fontsize', fontsize)
 ylabel('Windstress Magnitude (Pa)', 'fontsize', fontsize)
 title('NOR ESM1m ME Historical Jet DJF Timeseries', 'fontsize', fontsize+4)
-ylim([1850 2010])
+xlim([1850 2010])
+ylim([0.13 0.23])
 h1 = hline(mean(nor_esm1m_me_jet_DJF(1:100)));
 
 set(h1, 'linestyle', '--', 'linewidth', 2, 'color', 'k')
@@ -437,7 +455,8 @@ plot(can_esm2_time_year, can_esm2_lat_jet_DJF, 'linewidth', 2)
 xlabel('Time (years)', 'fontsize', fontsize)
 ylabel('Latitude (degrees)', 'fontsize', fontsize)
 title('CanESM2 Historical Jet Location DJF Timeseries', 'fontsize', fontsize+4)
-ylim([1850 2010])
+xlim([1850 2010]) 
+ylim([-55 -40])
 h1 = hline(mean(can_esm2_lat_jet_DJF(1:100)));
 
 set(h1, 'linestyle', '--', 'linewidth', 2, 'color', 'k')
@@ -459,7 +478,8 @@ plot(ccsm4_time_year, ccsm4_lat_jet_DJF, 'linewidth', 2)
 xlabel('Time (years)', 'fontsize', fontsize)
 ylabel('Latitude (degrees)', 'fontsize', fontsize)
 title('CCSM4 Historical Jet Location DJF Timeseries', 'fontsize', fontsize+4)
-ylim([1850 2010])
+xlim([1850 2010]) 
+ylim([-55 -40])
 h1 = hline(mean(ccsm4_lat_jet_DJF(1:100)));
 
 set(h1, 'linestyle', '--', 'linewidth', 2, 'color', 'k')
@@ -481,7 +501,8 @@ plot(cmcc_cesm_time_year, cmcc_cesm_lat_jet_DJF, 'linewidth', 2)
 xlabel('Time (years)', 'fontsize', fontsize)
 ylabel('Latitude (degrees)', 'fontsize', fontsize)
 title('CMCC CESM Historical Jet Location DJF Timeseries', 'fontsize', fontsize+4)
-ylim([1850 2010])
+xlim([1850 2010])
+ylim([-55 -40])
 h1 = hline(mean(cmcc_cesm_lat_jet_DJF(1:100)));
 
 set(h1, 'linestyle', '--', 'linewidth', 2, 'color', 'k')
@@ -503,7 +524,8 @@ plot(cmcc_cm_time_year, cmcc_cm_lat_jet_DJF, 'linewidth', 2)
 xlabel('Time (years)', 'fontsize', fontsize)
 ylabel('Latitude (degrees)', 'fontsize', fontsize)
 title('CMCC CM Historical Jet Location DJF Timeseries', 'fontsize', fontsize+4)
-ylim([1850 2010])
+xlim([1850 2010])
+ylim([-55 -40])
 h1 = hline(mean(cmcc_cm_lat_jet_DJF(1:100)));
 
 set(h1, 'linestyle', '--', 'linewidth', 2, 'color', 'k')
@@ -525,7 +547,8 @@ plot(cmcc_cms_time_year, cmcc_cms_lat_jet_DJF, 'linewidth', 2)
 xlabel('Time (years)', 'fontsize', fontsize)
 ylabel('Latitude (degrees)', 'fontsize', fontsize)
 title('CMCC CMs Historical Jet Location DJF Timeseries', 'fontsize', fontsize+4)
-ylim([1850 2010])
+xlim([1850 2010])
+ylim([-55 -40])
 h1 = hline(mean(cmcc_cms_lat_jet_DJF(1:100)));
 
 set(h1, 'linestyle', '--', 'linewidth', 2, 'color', 'k')
@@ -547,7 +570,8 @@ plot(cnrm_cm5_time_year, cnrm_cm5_lat_jet_DJF, 'linewidth', 2)
 xlabel('Time (years)', 'fontsize', fontsize)
 ylabel('Latitude (degrees)', 'fontsize', fontsize)
 title('CNRM CM5 Historical Jet Location DJF Timeseries', 'fontsize', fontsize+4)
-ylim([1850 2010])
+xlim([1850 2010]) 
+ylim([-55 -40])
 h1 = hline(mean(cnrm_cm5_lat_jet_DJF(1:100)));
 
 set(h1, 'linestyle', '--', 'linewidth', 2, 'color', 'k')
@@ -569,7 +593,8 @@ plot(gfdl_esm2g_time_year, gfdl_esm2g_lat_jet_DJF, 'linewidth', 2)
 xlabel('Time (years)', 'fontsize', fontsize)
 ylabel('Latitude (degrees)', 'fontsize', fontsize)
 title('GFDL ESM2G Historical Jet Location DJF Timeseries', 'fontsize', fontsize+4)
-ylim([1850 2010])
+xlim([1850 2010]) 
+ylim([-55 -40])
 h1 = hline(mean(gfdl_esm2g_lat_jet_DJF(1:100)));
 
 set(h1, 'linestyle', '--', 'linewidth', 2, 'color', 'k')
@@ -591,7 +616,8 @@ plot(gfdl_esm2m_time_year, gfdl_esm2m_lat_jet_DJF, 'linewidth', 2)
 xlabel('Time (years)', 'fontsize', fontsize)
 ylabel('Latitude (degrees)', 'fontsize', fontsize)
 title('GFDL ESM2M Historical Jet Location DJF Timeseries', 'fontsize', fontsize+4)
-ylim([1850 2010])
+xlim([1850 2010]) 
+ylim([-55 -40])
 h1 = hline(mean(gfdl_esm2m_lat_jet_DJF(1:100)));
 
 set(h1, 'linestyle', '--', 'linewidth', 2, 'color', 'k')
@@ -613,7 +639,8 @@ plot(ipsl_cm5a_lr_time_year, ipsl_cm5a_lr_lat_jet_DJF, 'linewidth', 2)
 xlabel('Time (years)', 'fontsize', fontsize)
 ylabel('Latitude (degrees)', 'fontsize', fontsize)
 title('IPSL CM5a LR Historical Jet Location DJF Timeseries', 'fontsize', fontsize+4)
-ylim([1850 2010])
+xlim([1850 2010]) 
+ylim([-55 -40])
 h1 = hline(mean(ipsl_cm5a_lr_lat_jet_DJF(1:100)));
 
 set(h1, 'linestyle', '--', 'linewidth', 2, 'color', 'k')
@@ -635,7 +662,8 @@ plot(ipsl_cm5a_mr_time_year, ipsl_cm5a_mr_lat_jet_DJF, 'linewidth', 2)
 xlabel('Time (years)', 'fontsize', fontsize)
 ylabel('Latitude (degrees)', 'fontsize', fontsize)
 title('IPSL CM5a MR Historical Jet Location DJF Timeseries', 'fontsize', fontsize+4)
-ylim([1850 2010])
+xlim([1850 2010]) 
+ylim([-55 -40])
 h1 = hline(mean(ipsl_cm5a_mr_lat_jet_DJF(1:100)));
 
 set(h1, 'linestyle', '--', 'linewidth', 2, 'color', 'k')
@@ -657,7 +685,8 @@ plot(ipsl_cm5b_lr_time_year, ipsl_cm5b_lr_lat_jet_DJF, 'linewidth', 2)
 xlabel('Time (years)', 'fontsize', fontsize)
 ylabel('Latitude (degrees)', 'fontsize', fontsize)
 title('IPSL CM5b LR Historical Jet Location DJF Timeseries', 'fontsize', fontsize+4)
-ylim([1850 2010])
+xlim([1850 2010]) 
+ylim([-55 -40])
 h1 = hline(mean(ipsl_cm5b_lr_lat_jet_DJF(1:100)));
 
 set(h1, 'linestyle', '--', 'linewidth', 2, 'color', 'k')
@@ -679,7 +708,8 @@ plot(miroc_esm_time_year, miroc_esm_lat_jet_DJF, 'linewidth', 2)
 xlabel('Time (years)', 'fontsize', fontsize)
 ylabel('Latitude (degrees)', 'fontsize', fontsize)
 title('MIROC ESM Historical Jet Location DJF Timeseries', 'fontsize', fontsize+4)
-ylim([1850 2010])
+xlim([1850 2010]) 
+ylim([-55 -40])
 h1 = hline(mean(miroc_esm_lat_jet_DJF(1:100)));
 
 set(h1, 'linestyle', '--', 'linewidth', 2, 'color', 'k')
@@ -701,7 +731,8 @@ plot(miroc_esm_chem_time_year, miroc_esm_chem_lat_jet_DJF, 'linewidth', 2)
 xlabel('Time (years)', 'fontsize', fontsize)
 ylabel('Latitude (degrees)', 'fontsize', fontsize)
 title('MIROC ESM CHEM Historical Jet Location DJF Timeseries', 'fontsize', fontsize+4)
-ylim([1850 2010])
+xlim([1850 2010]) 
+ylim([-55 -40])
 h1 = hline(mean(miroc_esm_chem_lat_jet_DJF(1:100)));
 
 set(h1, 'linestyle', '--', 'linewidth', 2, 'color', 'k')
@@ -723,7 +754,8 @@ plot(miroc5_time_year, miroc5_lat_jet_DJF, 'linewidth', 2)
 xlabel('Time (years)', 'fontsize', fontsize)
 ylabel('Latitude (degrees)', 'fontsize', fontsize)
 title('MIROC5 Historical Jet Location DJF Timeseries', 'fontsize', fontsize+4)
-ylim([1850 2010])
+xlim([1850 2010]) 
+ylim([-55 -40])
 h1 = hline(mean(miroc5_lat_jet_DJF(1:100)));
 
 set(h1, 'linestyle', '--', 'linewidth', 2, 'color', 'k')
@@ -745,7 +777,8 @@ plot(mpi_esm_lr_time_year, mpi_esm_lr_lat_jet_DJF, 'linewidth', 2)
 xlabel('Time (years)', 'fontsize', fontsize)
 ylabel('Latitude (degrees)', 'fontsize', fontsize)
 title('MPI ESM LR Historical Jet Location DJF Timeseries', 'fontsize', fontsize+4)
-ylim([1850 2010])
+xlim([1850 2010]) 
+ylim([-55 -40])
 h1 = hline(mean(mpi_esm_lr_lat_jet_DJF(1:100)));
 
 set(h1, 'linestyle', '--', 'linewidth', 2, 'color', 'k')
@@ -767,7 +800,8 @@ plot(mpi_esm_mr_time_year, mpi_esm_mr_lat_jet_DJF, 'linewidth', 2)
 xlabel('Time (years)', 'fontsize', fontsize)
 ylabel('Latitude (degrees)', 'fontsize', fontsize)
 title('MPI ESM MR Historical Jet Location DJF Timeseries', 'fontsize', fontsize+4)
-ylim([1850 2010])
+xlim([1850 2010])
+ylim([-55 -40])
 h1 = hline(mean(mpi_esm_mr_lat_jet_DJF(1:100)));
 
 set(h1, 'linestyle', '--', 'linewidth', 2, 'color', 'k')
@@ -789,7 +823,8 @@ plot(mri_cgcm3_time_year, mri_cgcm3_lat_jet_DJF, 'linewidth', 2)
 xlabel('Time (years)', 'fontsize', fontsize)
 ylabel('Latitude (degrees)', 'fontsize', fontsize)
 title('MRI CGCM3 Historical Jet Location DJF Timeseries', 'fontsize', fontsize+4)
-ylim([1850 2010])
+xlim([1850 2010])
+ylim([-55 -40])
 h1 = hline(mean(mri_cgcm3_lat_jet_DJF(1:100)));
 
 set(h1, 'linestyle', '--', 'linewidth', 2, 'color', 'k')
@@ -811,7 +846,8 @@ plot(nor_esm1m_me_time_year, nor_esm1m_me_lat_jet_DJF, 'linewidth', 2)
 xlabel('Time (years)', 'fontsize', fontsize)
 ylabel('Latitude (degrees)', 'fontsize', fontsize)
 title('NOR ESM1m ME Historical Jet Location DJF Timeseries', 'fontsize', fontsize+4)
-ylim([1850 2010])
+xlim([1850 2010])
+ylim([-55 -40])
 h1 = hline(mean(nor_esm1m_me_lat_jet_DJF(1:100)));
 
 set(h1, 'linestyle', '--', 'linewidth', 2, 'color', 'k')
