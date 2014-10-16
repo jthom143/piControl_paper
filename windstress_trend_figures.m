@@ -12,7 +12,7 @@ plot(cnrm_cm5_jet_xi      , cnrm_cm5_jet_f        , 'k-o')
 plot(cnrm_cm52_jet_xi     , cnrm_cm52_jet_f       , 'm-o')
 plot(gfdl_esm2g_jet_xi    , gfdl_esm2g_jet_f      , 'c-' )
 plot(gfdl_esm2m_jet_xi    , gfdl_esm2m_jet_f      , 'g-' )
-plot(ipsl_cm5a_lr_jet_x   , ipsl_cm5a_lr_jet_f  , 'b-*')
+plot(ipsl_cm5a_lr_jet_xi   , ipsl_cm5a_lr_jet_f  , 'b-*')
 plot(ipsl_cm5a_mr_jet_xi  , ipsl_cm5a_mr_jet_f  , 'g-*')
 plot(ipsl_cm5b_lr_jet_xi  , ipsl_cm5b_lr_jet_f  , 'r-*')
 plot(miroc_esm_jet_xi     , miroc_esm_jet_f     , 'c-*')
@@ -41,6 +41,10 @@ title('Jet Magnitude PDFs', 'fontsize', 20)
 model_labels = {'   ';'CanESM2'; 'CCSM4';'CMCC CESM'; 'CMCC CM'; 'CMCC CMs'; 'CNRM CM5'; 'CNRM CM5-2';'GFDL ESM2G';'GFDL_ESM2M'; 'IPSL CM5a LR'; 'IPSL CM5a MR';...
     'IPSL CM5b LR'; 'MIROC ESM'; 'MIROC ESM CHEM';'MIROC5';'MPI ESM LR'; 'MPI ESM MR';'MRI CGCM3'; 'NOR ESM1m M'; 'NOR ESM1m ME';...
     'CM2Mc'; 'CM2.1'; '   '};
+Models = {'CanESM2'; 'CCSM4';'CMCC CESM'; 'CMCC CM'; 'CMCC CMs'; 'CNRM CM5'; 'CNRM CM5-2';'GFDL ESM2G';'GFDL ESM2M'; 'IPSL CM5a LR'; 'IPSL CM5a MR';...
+    'IPSL CM5b LR'; 'MIROC ESM'; 'MIROC ESM CHEM';'MIROC5';'MPI ESM LR'; 'MPI ESM MR';'MRI CGCM3'; 'NOR ESM1m M'; 'NOR ESM1m ME';...
+    'CM2Mc'; 'CM2.1'};
+
 
 % Plot 2 x standard deviation and 95th percentile
 

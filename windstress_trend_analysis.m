@@ -10,8 +10,8 @@
 
 %% Good Matlab Housekeeping
 
-close all
-clear all
+% close all
+% clear all
 
 % addpath /Users/jordanthomas/Desktop/Research/NCEPReanalysis1
 % addpath /Users/jordanthomas/Desktop/Research/NCEPReanalysis2
