@@ -11,12 +11,12 @@ taux_zonalavg = squeeze(mean(taux_mon));
 
 % Fit cubic function to the monthly wind stress data 
 
-lat_30 = findnearest(-30,lat);
+lat_40 = findnearest(-40,lat);
 lat_60 = findnearest(-60,lat);
 
-lat1 = lat(lat_30:lat_60,:);
+lat1 = lat(lat_40:lat_60,:);
 
-taux_zonalavg_window  = taux_zonalavg(lat_30:lat_60,:);        % Zonally averaged wind stress between 40-60
+taux_zonalavg_window  = taux_zonalavg(lat_40:lat_60,:);        % Zonally averaged wind stress between 40-60
 
 y_mon = -9999*ones(length(lat1),length(time_month));
 
@@ -32,9 +32,9 @@ lat_new = lat(length(lat)):0.1:lat(1);
 lat_new = lat_new';
 lat_new = flipud(lat_new);
 
-lat_30 = findnearest(-30,lat_new);
+lat_40 = findnearest(-30,lat_new);
 lat_60 = findnearest(-60,lat_new);
-lat_new = lat_new(lat_30:lat_60);
+lat_new = lat_new(lat_40:lat_60);
 
 
 y_mon_new = interp1(lat1, y_mon, lat_new, 'cubic');
