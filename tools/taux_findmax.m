@@ -15,7 +15,7 @@ function [ jet_mon, lat_jet_mon, y_mon, jet_ann, lat_jet_ann ] = taux_findmax( t
 
 taux_zonalavg = squeeze(nanmean(taux_mon));
 
-% Fit cubic function to the monthly wind stress data 
+% Fit quadratic function to the monthly wind stress data 
 
 lat_40 = findnearest(-40,lat);
 lat_60 = findnearest(-60,lat);
@@ -27,7 +27,7 @@ taux_zonalavg_window  = taux_zonalavg(lat_60:lat_40,:);        % Zonally average
 y_mon = -9999*ones(length(lat1),length(time_month));
 
 for i = 1:length(time_month)
-    [p,s,mu] = polyfit(lat1, squeeze(taux_zonalavg_window(:,i)), 3); 
+    [p,s,mu] = polyfit(lat1, squeeze(taux_zonalavg_window(:,i)), 2); 
     
     y_mon(:,i) = polyval(p, lat1, s, mu);
 end
