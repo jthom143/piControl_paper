@@ -73,8 +73,8 @@ sam_DJF = sam_DJF(:,2)';
 
 %% Trend Analysis PDFs
 
-trend_period = 30;
-trend_length = 30;
+trend_period = 25;
+trend_length = 25;
 
 [ sam_f, sam_xi, mean_sam, std_sam, sam_trends_yrs] = SAM_Trends( time_year, sam_DJF, trend_period, trend_length );
 

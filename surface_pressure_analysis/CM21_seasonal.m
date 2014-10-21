@@ -71,8 +71,8 @@ SAM_unnormalized = squeeze(nanmean(reshape(SAM_mon_unnormalized, 12, []),1));
 
 %% Trend Analysis PDFs
 
-trend_period = 30;
-trend_length = 30;
+trend_period = 25;
+trend_length = 25;
 
 [ sam_f, sam_xi, mean_sam, std_sam,sam_trends_yrs] = SAM_Trends( time_year, sam_DJF, trend_period, trend_length );
 

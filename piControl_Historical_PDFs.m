@@ -309,7 +309,7 @@ set(hR1, 'linewidth', 2, 'color', 'g', 'linestyle', '--')
 figure(1)
 subplot(5,4,19)
 h1 = plot(nor_esm1m_me_jet_xi, nor_esm1m_me_jet_f, 'linewidth', 2);
-xlabel('Pa/30 yrs')
+xlabel('Pa/25 yrs')
  
  
 title('NOR ESM1m ME')
@@ -617,7 +617,7 @@ set(hR1, 'linewidth', 2, 'color', 'g', 'linestyle', '--')
 figure(2)
 subplot(5,4,19)
 h1 = plot(nor_esm1m_me_jet_loc_xi, nor_esm1m_me_jet_loc_f, 'linewidth', 2);
-xlabel('Pa/30 yrs')
+xlabel('Pa/25 yrs')
  
  
 title('NOR ESM1m ME')

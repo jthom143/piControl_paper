@@ -52,7 +52,7 @@ addpath /data1/fesd1/jthom143/piControl_paper/tools
  
 % NCEP Reanalyses 
 
-trend_period = 30;
+trend_period = 25;
 
 [ jet_u850_trend_30, lat_u850_trend_30] = NCEP1_u850_trends_seasonal(trend_period);
 %[ taux_trend_30_2, ~, lat_trend_30_2, ~, ~, ~ ] = NCEP2_trends(trend_period);

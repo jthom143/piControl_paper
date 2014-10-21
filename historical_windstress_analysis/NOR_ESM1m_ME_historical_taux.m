@@ -66,10 +66,10 @@ end
 
 
 %% Trend Analysis PDFs
-trend_period = 30;
+trend_period = 25;
 
-begin_time = findnearest(1982, time_year);
-end_time   = findnearest(2012, time_year);
+begin_time = findnearest(1980, time_year);
+end_time   = findnearest(2005, time_year);
 
 jet_trend = polyfit(time_year(begin_time:end_time), jet_DJF(:,begin_time:end_time),1); % Units: mb/year
 jet_trend_30 = jet_trend(1).*trend_period; % Units: Pa/30 yrs
