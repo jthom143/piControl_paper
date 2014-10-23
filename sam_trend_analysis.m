@@ -50,7 +50,7 @@ addpath /data1/fesd1/jthom143/piControl_paper/surface_pressure_analysis
 
 % NCEP Reanalyses 
 
-trend_period = 30;
+trend_period = 25;
 
 [ ~, ~, sam_trend_30 ] = NCEP1_trends_seasonal(trend_period);
 %%%%%%%%%%%%
