@@ -1,10 +1,10 @@
-function [ time_year, jet_DJF, lat_jet_DJF, jet_trend, jet_trend_30, jet_loc_trend, jet_loc_trend_30 ] = GFDL_ESM2G_historical_u850
+function [ time_year, jet_DJF, lat_jet_DJF, jet_trend, jet_trend_30, jet_loc_trend, jet_loc_trend_30 ] = GFDL_ESM2G_historical_u850(filename)
 
 %CanESM2_historical_taux loads in the windstress data for the CanESM2 historical ensemble 1 model run and calculates the westerly wind jet and location and then calcuates the trend pdfs for these two variables. 
 
 %% Import Data
 current_path = pwd;
-pathname_u850 = fullfile(current_path, 'HistoricalData/GFDL_ESM2G_historical_u850.cdf');     % CDF file from Lamont website
+pathname_u850 = fullfile(current_path, 'HistoricalData', filename);     % CDF file from Lamont website
 
 
 u850       = ncread(pathname_u850, 'ua');
@@ -23,12 +23,12 @@ u850(u850>1e15)=NaN;
 
 %% Create Useful time vectors
 yearnum = 1:length(time)/12;
-time_year = 1849+yearnum;
+time_year = 1861+yearnum;
 
 
 %% Jet Strength and Location Analysis
 
-[ jet_mon, lat_jet_mon, ~, ~, ~ ] = taux_findmax( u850, lat, time );                                              
+[ jet_mon, lat_jet_mon, ~, ~, ~ ] = taux_findmax_new( u850, lat, time );                                              
 
 %% Seasonal Analysis 
 

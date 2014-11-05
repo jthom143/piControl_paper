@@ -27,7 +27,7 @@ time_year = 1:length(time_month)/12;
 
 %% Jet Strength and Location Analysis
 
-[ jet_mon, lat_jet_mon, ~, ~, ~ ] = taux_findmax( u850, lat, time_month );
+[ jet_mon, lat_jet_mon, ~, ~, ~ ] = taux_findmax_new( u850, lat, time_month );
 
 %% Seasonal Analysis 
 
