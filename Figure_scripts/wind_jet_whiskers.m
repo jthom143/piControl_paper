@@ -95,6 +95,8 @@ historical_trend_loc = [can_esm2_jet_loc_trend_30_u850,...
                     mri_cgcm3_jet_loc_trend_30_u850,...
                     nor_esm1m_m_jet_loc_trend_30_u850,...
                     nor_esm1m_me_jet_loc_trend_30_u850];
+
+                
                 
 x_axis = 1:length(mean_trend_jet_mag);
 x_label = {'  ';'CanESM2'; 'CCSM4'; 'CNRM CM52'; 'GFDL ESM2M'; 'IPSL CM5A LR'; 'IPSL CM5A MR'; 'IPSL CM5B LR'; 'MIROC ESM'; 'MIROC ESM CHEM'; 'MIROC5'; 'MPI ESM LR'; 'MPI ESM MR'; 'MRI CGCM3'; 'NOR ESM1M M'; 'NOR ESM1M ME'; '  '}';
@@ -130,4 +132,196 @@ set(gca, 'XTick', 0:16)
 rotateXLabels( gca, 45 )
 ylim([-6 6])
 
-print -depsc allmodels_jet_loc_whiskers
+print -depsc allmodels_jet_loc_whiskers              
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+%% Ensemble Figures
+can_esm2_ensemble_trends     = [can_esm2_jet_trend_30_u850, can_esm2_jet_trend_30_u850_e2, can_esm2_jet_trend_30_u850_e3, can_esm2_jet_trend_30_u850_e4, can_esm2_jet_trend_30_u850_e5];
+cnrm_cm5_ensemble_trends     = [cnrm_cm5_jet_trend_30_u850, cnrm_cm5_jet_trend_30_u850_e2, cnrm_cm5_jet_trend_30_u850_e3, cnrm_cm5_jet_trend_30_u850_e4, cnrm_cm5_jet_trend_30_u850_e5, cnrm_cm5_jet_trend_30_u850_e6, cnrm_cm5_jet_trend_30_u850_e7, cnrm_cm5_jet_trend_30_u850_e8, cnrm_cm5_jet_trend_30_u850_e9];
+ipsl_cm5a_lr_ensemble_trends = [ipsl_cm5a_lr_jet_trend_30_u850, ipsl_cm5a_lr_jet_trend_30_u850_e2, ipsl_cm5a_lr_jet_trend_30_u850_e3, ipsl_cm5a_lr_jet_trend_30_u850_e4, ipsl_cm5a_lr_jet_trend_30_u850_e5, ipsl_cm5a_lr_jet_trend_30_u850_e6];
+ipsl_cm5a_mr_ensemble_trends = [ipsl_cm5a_mr_jet_trend_30_u850, ipsl_cm5a_mr_jet_trend_30_u850_e2, ipsl_cm5a_mr_jet_trend_30_u850_e3];
+miroc_esm_ensemble_trends    = [miroc_esm_jet_trend_30_u850, miroc_esm_jet_trend_30_u850_e2, miroc_esm_jet_trend_30_u850_e3];
+miroc5_ensemble_trends       = [miroc5_jet_trend_30_u850, miroc5_jet_trend_30_u850_e2, miroc5_jet_trend_30_u850_e3, miroc5_jet_trend_30_u850_e4, miroc5_jet_trend_30_u850_e5];
+mpi_esm_lr_ensemble_trends   = [mpi_esm_lr_jet_trend_30_u850, mpi_esm_lr_jet_trend_30_u850_e2, mpi_esm_lr_jet_trend_30_u850_e3];
+mpi_esm_mr_ensemble_trends   = [mpi_esm_mr_jet_trend_30_u850, mpi_esm_mr_jet_trend_30_u850_e2, mpi_esm_mr_jet_trend_30_u850_e3];
+mri_cgcm3_ensemble_trends    = [mri_cgcm3_jet_trend_30_u850, mri_cgcm3_jet_trend_30_u850_e2, mri_cgcm3_jet_trend_30_u850_e3];
+nor_esm1m_m_ensemble_trends  = [nor_esm1m_m_jet_trend_30_u850, nor_esm1m_m_jet_trend_30_u850_e2, nor_esm1m_m_jet_trend_30_u850_e3];
+
+
+
+can_esm2_ensemble_trends_loc     = [can_esm2_jet_loc_trend_30_u850, can_esm2_jet_loc_trend_30_u850_e2, can_esm2_jet_loc_trend_30_u850_e3, can_esm2_jet_loc_trend_30_u850_e4, can_esm2_jet_loc_trend_30_u850_e5];
+cnrm_cm5_ensemble_trends_loc     = [cnrm_cm5_jet_loc_trend_30_u850, cnrm_cm5_jet_loc_trend_30_u850_e2, cnrm_cm5_jet_loc_trend_30_u850_e3, cnrm_cm5_jet_loc_trend_30_u850_e4, cnrm_cm5_jet_loc_trend_30_u850_e5, cnrm_cm5_jet_loc_trend_30_u850_e6, cnrm_cm5_jet_loc_trend_30_u850_e7, cnrm_cm5_jet_loc_trend_30_u850_e8, cnrm_cm5_jet_loc_trend_30_u850_e9];
+ipsl_cm5a_lr_ensemble_trends_loc = [ipsl_cm5a_lr_jet_loc_trend_30_u850, ipsl_cm5a_lr_jet_loc_trend_30_u850_e2, ipsl_cm5a_lr_jet_loc_trend_30_u850_e3, ipsl_cm5a_lr_jet_loc_trend_30_u850_e4, ipsl_cm5a_lr_jet_loc_trend_30_u850_e5, ipsl_cm5a_lr_jet_loc_trend_30_u850_e6];
+ipsl_cm5a_mr_ensemble_trends_loc = [ipsl_cm5a_mr_jet_loc_trend_30_u850, ipsl_cm5a_mr_jet_loc_trend_30_u850_e2, ipsl_cm5a_mr_jet_loc_trend_30_u850_e3];
+miroc_esm_ensemble_trends_loc    = [miroc_esm_jet_loc_trend_30_u850, miroc_esm_jet_loc_trend_30_u850_e2, miroc_esm_jet_loc_trend_30_u850_e3];
+miroc5_ensemble_trends_loc       = [miroc5_jet_loc_trend_30_u850, miroc5_jet_loc_trend_30_u850_e2, miroc5_jet_loc_trend_30_u850_e3, miroc5_jet_loc_trend_30_u850_e4, miroc5_jet_loc_trend_30_u850_e5];
+mpi_esm_lr_ensemble_trends_loc   = [mpi_esm_lr_jet_loc_trend_30_u850, mpi_esm_lr_jet_loc_trend_30_u850_e2, mpi_esm_lr_jet_loc_trend_30_u850_e3];
+mpi_esm_mr_ensemble_trends_loc   = [mpi_esm_mr_jet_loc_trend_30_u850, mpi_esm_mr_jet_loc_trend_30_u850_e2, mpi_esm_mr_jet_loc_trend_30_u850_e3];
+mri_cgcm3_ensemble_trends_loc    = [mri_cgcm3_jet_loc_trend_30_u850, mri_cgcm3_jet_loc_trend_30_u850_e2, mri_cgcm3_jet_loc_trend_30_u850_e3];
+nor_esm1m_m_ensemble_trends_loc  = [nor_esm1m_m_jet_loc_trend_30_u850, nor_esm1m_m_jet_loc_trend_30_u850_e2, nor_esm1m_m_jet_loc_trend_30_u850_e3];
+
+mean_ensemble_trends = [nanmean(can_esm2_ensemble_trends),...
+                        ccsm4_jet_trend_30_u850,...
+                        nanmean(cnrm_cm5_ensemble_trends),...
+                        gfdl_esm2m_jet_trend_30_u850,...
+                        nanmean(ipsl_cm5a_lr_ensemble_trends),...
+                        nanmean(ipsl_cm5a_mr_ensemble_trends),...
+                        ipsl_cm5b_lr_jet_trend_30_u850,...
+                        nanmean(miroc_esm_ensemble_trends),...
+                        miroc_esm_chem_jet_trend_30_u850,...
+                        nanmean(miroc5_ensemble_trends),...
+                        nanmean(mpi_esm_lr_ensemble_trends),...
+                        nanmean(mpi_esm_mr_ensemble_trends),...
+                        nanmean(mri_cgcm3_ensemble_trends),...
+                        nanmean(nor_esm1m_m_ensemble_trends),...
+                        nor_esm1m_me_jet_trend_30_u850];
+                    
+E_ensemble_trends =    [max(can_esm2_ensemble_trends)-nanmean(can_esm2_ensemble_trends),...
+                        NaN,...
+                        max(cnrm_cm5_ensemble_trends)-nanmean(cnrm_cm5_ensemble_trends),...
+                        NaN,...
+                        max(ipsl_cm5a_lr_ensemble_trends)-nanmean(ipsl_cm5a_lr_ensemble_trends),...
+                        max(ipsl_cm5a_mr_ensemble_trends)-nanmean(ipsl_cm5a_mr_ensemble_trends),...
+                        NaN,...
+                        max(miroc_esm_ensemble_trends)-nanmean(miroc_esm_ensemble_trends),...
+                        NaN,...
+                        max(miroc5_ensemble_trends)-nanmean(miroc5_ensemble_trends),...
+                        max(mpi_esm_lr_ensemble_trends)-nanmean(mpi_esm_lr_ensemble_trends),...
+                        max(mpi_esm_mr_ensemble_trends)-nanmean(mpi_esm_mr_ensemble_trends),...
+                        max(mri_cgcm3_ensemble_trends)-nanmean(mri_cgcm3_ensemble_trends),...
+                        max(nor_esm1m_m_ensemble_trends)-nanmean(nor_esm1m_m_ensemble_trends),...
+                        NaN];
+                        
+ mean_ensemble_trends_loc = [nanmean(can_esm2_ensemble_trends_loc),...
+                        ccsm4_jet_loc_trend_30_u850,...
+                        nanmean(cnrm_cm5_ensemble_trends_loc),...
+                        gfdl_esm2m_jet_loc_trend_30_u850,...
+                        nanmean(ipsl_cm5a_lr_ensemble_trends_loc),...
+                        nanmean(ipsl_cm5a_mr_ensemble_trends_loc),...
+                        ipsl_cm5b_lr_jet_loc_trend_30_u850,...
+                        nanmean(miroc_esm_ensemble_trends_loc),...
+                        miroc_esm_chem_jet_loc_trend_30_u850,...
+                        nanmean(miroc5_ensemble_trends_loc),...
+                        nanmean(mpi_esm_lr_ensemble_trends_loc),...
+                        nanmean(mpi_esm_mr_ensemble_trends_loc),...
+                        nanmean(mri_cgcm3_ensemble_trends_loc),...
+                        nanmean(nor_esm1m_m_ensemble_trends_loc),...
+                        nor_esm1m_me_jet_loc_trend_30_u850];
+                    
+E_ensemble_trends_loc = [max(can_esm2_ensemble_trends_loc)-nanmean(can_esm2_ensemble_trends_loc),...
+                        NaN,...
+                        max(cnrm_cm5_ensemble_trends_loc)-nanmean(cnrm_cm5_ensemble_trends_loc),...
+                        NaN,...
+                        max(ipsl_cm5a_lr_ensemble_trends_loc)-nanmean(ipsl_cm5a_lr_ensemble_trends_loc),...
+                        max(ipsl_cm5a_mr_ensemble_trends_loc)-nanmean(ipsl_cm5a_mr_ensemble_trends_loc),...
+                        NaN,...
+                        max(miroc_esm_ensemble_trends_loc)-nanmean(miroc_esm_ensemble_trends_loc),...
+                        NaN,...
+                        max(miroc5_ensemble_trends_loc)-nanmean(miroc5_ensemble_trends_loc),...
+                        max(mpi_esm_lr_ensemble_trends_loc)-nanmean(mpi_esm_lr_ensemble_trends_loc),...
+                        max(mpi_esm_mr_ensemble_trends_loc)-nanmean(mpi_esm_mr_ensemble_trends_loc),...
+                        max(mri_cgcm3_ensemble_trends_loc)-nanmean(mri_cgcm3_ensemble_trends_loc),...
+                        max(nor_esm1m_m_ensemble_trends_loc)-nanmean(nor_esm1m_m_ensemble_trends_loc),...
+                        NaN];
+
+                    
+                    
+x_axis = 1:length(mean_trend_jet_mag);
+x_label = {'  ';'CanESM2'; 'CCSM4'; 'CNRM CM5'; 'GFDL ESM2M'; 'IPSL CM5A LR'; 'IPSL CM5A MR'; 'IPSL CM5B LR'; 'MIROC ESM'; 'MIROC ESM CHEM'; 'MIROC5'; 'MPI ESM LR'; 'MPI ESM MR'; 'MRI CGCM3'; 'NOR ESM1M M'; 'NOR ESM1M ME'; '  '}';
+
+figure(3)
+h1 = errorbar(x_axis,mean_trend_jet_mag,2.*std_trend_jet_mag);
+hold on 
+h2 = plot(x_axis, historical_trend, 'r*');
+h3 = hline(jet_u850_trend_30);
+h4 = plot(1, can_esm2_ensemble_trends, 'r*');
+h5 = plot(3, cnrm_cm5_ensemble_trends, 'r*');
+h6 = plot(5, ipsl_cm5a_lr_ensemble_trends, 'r*');
+h7 = plot(6, ipsl_cm5a_mr_ensemble_trends, 'r*');
+h7 = plot(8, miroc_esm_ensemble_trends, 'r*');
+h7 = plot(10, miroc5_ensemble_trends, 'r*');
+h7 = plot(11, mpi_esm_lr_ensemble_trends, 'r*');
+h7 = plot(12, mpi_esm_mr_ensemble_trends, 'r*');
+h7 = plot(13, mri_cgcm3_ensemble_trends, 'r*');
+h7 = plot(14, nor_esm1m_m_ensemble_trends, 'r*');
+
+
+set(h3, 'linestyle', '- -', 'linewidth', 2, 'color', [0, 0.8, 0])
+set(h1,'marker','o', 'MarkerFaceColor', 'b')
+set(h1,'linestyle','none')
+set(gca, 'XTickLabel', x_label)
+set(gca, 'XTick', 0:16)
+rotateXLabels( gca, 45 )
+ylim([-2.2 2.2])
+
+print -depsc allmodels_jet_mag_whiskers_ensemble
+
+
+figure(4)
+h1 = errorbar(x_axis,mean_trend_jet_loc,2.*std_trend_jet_loc);
+hold on 
+h2 = plot(x_axis, historical_trend_loc, 'r*');
+h3 = hline(lat_u850_trend_30);
+h4 = plot(1, can_esm2_ensemble_trends_loc, 'r*');
+h5 = plot(3, cnrm_cm5_ensemble_trends_loc, 'r*');
+h6 = plot(5, ipsl_cm5a_lr_ensemble_trends_loc, 'r*');
+h7 = plot(6, ipsl_cm5a_mr_ensemble_trends_loc, 'r*');
+h7 = plot(8, miroc_esm_ensemble_trends_loc, 'r*');
+h7 = plot(10, miroc5_ensemble_trends_loc, 'r*');
+h7 = plot(11, mpi_esm_lr_ensemble_trends_loc, 'r*');
+h7 = plot(12, mpi_esm_mr_ensemble_trends_loc, 'r*');
+h7 = plot(13, mri_cgcm3_ensemble_trends_loc, 'r*');
+h7 = plot(14, nor_esm1m_m_ensemble_trends_loc, 'r*');
+
+set(h3, 'linestyle', '- -', 'linewidth', 2, 'color', [0, 0.8, 0])
+set(h1,'marker','o', 'MarkerFaceColor', 'b')
+set(h1,'linestyle','none')
+set(gca, 'XTickLabel', x_label)
+set(gca, 'XTick', 0:16)
+rotateXLabels( gca, 45 )
+ylim([-6 6])
+
+print -depsc allmodels_jet_loc_whiskers_ensemble
+
+figure(5)
+h1 = errorbar(x_axis,mean_trend_jet_mag,2.*std_trend_jet_mag);
+hold on 
+h2 = errorbar(x_axis, mean_ensemble_trends, E_ensemble_trends, 'r*');
+h3 = hline(jet_u850_trend_30);
+
+set(h1,'marker','o', 'MarkerFaceColor', 'b')
+set(h1,'linestyle','none')
+set(h2,'linestyle','none')
+set(h3, 'linestyle', '- -', 'linewidth', 2, 'color', [0, 0.8, 0])
+set(gca, 'XTickLabel', x_label)
+set(gca, 'XTick', 0:16)
+rotateXLabels( gca, 45 )
+ylim([-2.2 2.2])
+
+print -depsc allmodels_jetwind_whiskers_ensemble_errorbars
+
+
+figure(6)
+h1 = errorbar(x_axis,mean_trend_jet_loc,2.*std_trend_jet_loc);
+hold on 
+h2 = errorbar(x_axis, mean_ensemble_trends_loc, E_ensemble_trends_loc, 'r*');
+h3 = hline(lat_u850_trend_30);
+
+set(h1,'marker','o', 'MarkerFaceColor', 'b')
+set(h1,'linestyle','none')
+set(h2,'linestyle','none')
+set(h3, 'linestyle', '- -', 'linewidth', 2, 'color', [0, 0.8, 0])
+set(gca, 'XTickLabel', x_label)
+set(gca, 'XTick', 0:16)
+rotateXLabels( gca, 45 )
+
+print -depsc allmodels_jet_loc_whiskers_ensemble_errorbars
+
