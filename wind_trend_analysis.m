@@ -13,14 +13,13 @@
 % close all
 % clear all
 
-addpath /home/jthom143/NCEPReanalysis1
-addpath /home/jthom143/NCEPReanalysis2
 addpath /data1/fesd1/jthom143/piControl_paper/wind_analysis
 addpath /data1/fesd1/jthom143/piControl_paper/tools
+addpath /data1/fesd1/jthom143/piControl_paper/Observations
 
 %% Trend Analysis
 
-Type = 'cdf';
+Type = 'pdf';
 
 [ can_esm2_jet_f        , can_esm2_jet_xi        , can_esm2_mean_jet        , can_esm2_std_jet        , can_esm2_jet_trends_yrs       , can_esm2_jet_loc_f            , can_esm2_jet_loc_xi           , can_esm2_mean_jet_loc       , can_esm2_std_jet_loc       , can_esm2_jet_loc_trends_yrs       , can_esm2_time_year       , can_esm2_jet_DJF       , can_esm2_jet_loc_DJF      ] = CanESM2_u850_seasonal(Type);
 [ ccsm4_jet_f           , ccsm4_jet_xi           , ccsm4_mean_jet           , ccsm4_std_jet           , ccsm4_jet_trends_yrs          , ccsm4_jet_loc_f               , ccsm4_jet_loc_xi              , ccsm4_mean_jet_loc          , ccsm4_std_jet_loc          , ccsm4_jet_loc_trends_yrs          , ccsm4_time_year          , ccsm4_jet_DJF          , ccsm4_jet_loc_DJF         ] = CCSM4_u850_seasonal(Type);
@@ -49,8 +48,9 @@ Type = 'cdf';
 
 trend_period = 25;
 
-[ jet_u850_trend_30, lat_u850_trend_30] = NCEP1_u850_trends_seasonal(trend_period);
-%[ taux_trend_30_2, ~, lat_trend_30_2, ~, ~, ~ ] = NCEP2_trends(trend_period);
+[ jet_u850_trend_30        , lat_u850_trend_30]         = NCEP1_u850_trends_seasonal(trend_period);
+[ r2_jet_u850_trend_30     , r2_lat_u850_trend_30]      = NCEP2_u850_trends_seasonal(trend_period);
+[ era_int_jet_u850_trend_30, era_int_lat_u850_trend_30] = ERA_Interim_u850_trends_seasonal(trend_period);
 
 
 % Create matrix with all the model trend vectors

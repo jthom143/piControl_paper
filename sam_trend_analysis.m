@@ -16,10 +16,9 @@
 % addpath /Users/jordanthomas/Desktop/Research/NCEPReanalysis2
 % addpath /Users/jordanthomas/Documents/MATLAB/GeneralFunctions
 
-addpath /home/jthom143/Tools/Functions
-addpath /home/jthom143/NCEPReanalysis1
 addpath /data1/fesd1/jthom143/piControl_paper/surface_pressure_analysis
-
+addpath /data1/fesd1/jthom143/piControl_paper/Observations
+addpath /data1/fesd1/jthom143/piControl_paper/tools
 
 %% Trend Analysis
 
@@ -52,7 +51,10 @@ addpath /data1/fesd1/jthom143/piControl_paper/surface_pressure_analysis
 
 trend_period = 25;
 
-[ ~, ~, sam_trend_30 ] = NCEP1_trends_seasonal(trend_period);
+[ ~, ~, sam_trend_30 ]   = NCEP1_trends_seasonal(trend_period);
+[ r2_sam_trend_30 ]      = NCEP2_trends_seasonal_ps(trend_period);
+[ era_int_sam_trend_30 ] = ERA_Interim_trends_seasonal_ps(trend_period);
+
 %%%%%%%%%%%%
 
    
