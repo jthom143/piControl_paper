@@ -106,8 +106,11 @@ h1 = errorbar(x_axis,mean_trend_jet_mag,2.*std_trend_jet_mag);
 hold on 
 h2 = plot(x_axis, historical_trend, 'r*');
 h3 = hline(jet_u850_trend_30);
-
+h4 = hline(r2_jet_u850_trend_30);
+h5 = hline(era_int_jet_u850_trend_30);
 set(h3, 'linestyle', '- -', 'linewidth', 2, 'color', [0, 0.8, 0])
+set(h4, 'linestyle', '- -', 'linewidth', 2, 'color', [0.9 0.6 0.2])
+set(h5, 'linestyle', '- -', 'linewidth', 2, 'color', [0.6 0.03 0.9])
 set(h1,'marker','o', 'MarkerFaceColor', 'b')
 set(h1,'linestyle','none')
 set(gca, 'XTickLabel', x_label)
@@ -123,8 +126,11 @@ h1 = errorbar(x_axis,mean_trend_jet_loc,2.*std_trend_jet_loc);
 hold on 
 h2 = plot(x_axis, historical_trend_loc, 'r*');
 h3 = hline(lat_u850_trend_30);
-
+h4 = hline(r2_lat_u850_trend_30);
+h5 = hline(era_int_lat_u850_trend_30);
 set(h3, 'linestyle', '- -', 'linewidth', 2, 'color', [0, 0.8, 0])
+set(h4, 'linestyle', '- -', 'linewidth', 2, 'color', [0.9 0.6 0.2])
+set(h5, 'linestyle', '- -', 'linewidth', 2, 'color', [0.6 0.03 0.9])
 set(h1,'marker','o', 'MarkerFaceColor', 'b')
 set(h1,'linestyle','none')
 set(gca, 'XTickLabel', x_label)
@@ -242,6 +248,11 @@ h1 = errorbar(x_axis,mean_trend_jet_mag,2.*std_trend_jet_mag);
 hold on 
 h2 = plot(x_axis, historical_trend, 'r*');
 h3 = hline(jet_u850_trend_30);
+h8 = hline(r2_jet_u850_trend_30);
+h9 = hline(era_int_jet_u850_trend_30);
+set(h3, 'linestyle', '- -', 'linewidth', 2, 'color', [0, 0.8, 0])
+set(h8, 'linestyle', '- -', 'linewidth', 2, 'color', [0.9 0.6 0.2])
+set(h9, 'linestyle', '- -', 'linewidth', 2, 'color', [0.6 0.03 0.9])
 h4 = plot(1, can_esm2_ensemble_trends, 'r*');
 h5 = plot(3, cnrm_cm5_ensemble_trends, 'r*');
 h6 = plot(5, ipsl_cm5a_lr_ensemble_trends, 'r*');
@@ -253,8 +264,6 @@ h7 = plot(12, mpi_esm_mr_ensemble_trends, 'r*');
 h7 = plot(13, mri_cgcm3_ensemble_trends, 'r*');
 h7 = plot(14, nor_esm1m_m_ensemble_trends, 'r*');
 
-
-set(h3, 'linestyle', '- -', 'linewidth', 2, 'color', [0, 0.8, 0])
 set(h1,'marker','o', 'MarkerFaceColor', 'b')
 set(h1,'linestyle','none')
 set(gca, 'XTickLabel', x_label)
@@ -270,6 +279,11 @@ h1 = errorbar(x_axis,mean_trend_jet_loc,2.*std_trend_jet_loc);
 hold on 
 h2 = plot(x_axis, historical_trend_loc, 'r*');
 h3 = hline(lat_u850_trend_30);
+h8 = hline(r2_lat_u850_trend_30);
+h9 = hline(era_int_lat_u850_trend_30);
+set(h3, 'linestyle', '- -', 'linewidth', 2, 'color', [0, 0.8, 0])
+set(h8, 'linestyle', '- -', 'linewidth', 2, 'color', [0.9 0.6 0.2])
+set(h9, 'linestyle', '- -', 'linewidth', 2, 'color', [0.6 0.03 0.9])
 h4 = plot(1, can_esm2_ensemble_trends_loc, 'r*');
 h5 = plot(3, cnrm_cm5_ensemble_trends_loc, 'r*');
 h6 = plot(5, ipsl_cm5a_lr_ensemble_trends_loc, 'r*');
@@ -296,7 +310,11 @@ h1 = errorbar(x_axis,mean_trend_jet_mag,2.*std_trend_jet_mag);
 hold on 
 h2 = errorbar(x_axis, mean_ensemble_trends, E_ensemble_trends, 'r*');
 h3 = hline(jet_u850_trend_30);
-
+h4 = hline(r2_jet_u850_trend_30);
+h5 = hline(era_int_jet_u850_trend_30);
+set(h3, 'linestyle', '- -', 'linewidth', 2, 'color', [0, 0.8, 0])
+set(h4, 'linestyle', '- -', 'linewidth', 2, 'color', [0.9 0.6 0.2])
+set(h5, 'linestyle', '- -', 'linewidth', 2, 'color', [0.6 0.03 0.9])
 set(h1,'marker','o', 'MarkerFaceColor', 'b')
 set(h1,'linestyle','none')
 set(h2,'linestyle','none')
@@ -314,7 +332,11 @@ h1 = errorbar(x_axis,mean_trend_jet_loc,2.*std_trend_jet_loc);
 hold on 
 h2 = errorbar(x_axis, mean_ensemble_trends_loc, E_ensemble_trends_loc, 'r*');
 h3 = hline(lat_u850_trend_30);
-
+h4 = hline(r2_lat_u850_trend_30);
+h5 = hline(era_int_lat_u850_trend_30);
+set(h3, 'linestyle', '- -', 'linewidth', 2, 'color', [0, 0.8, 0])
+set(h4, 'linestyle', '- -', 'linewidth', 2, 'color', [0.9 0.6 0.2])
+set(h5, 'linestyle', '- -', 'linewidth', 2, 'color', [0.6 0.03 0.9])
 set(h1,'marker','o', 'MarkerFaceColor', 'b')
 set(h1,'linestyle','none')
 set(h2,'linestyle','none')
