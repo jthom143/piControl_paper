@@ -27,4 +27,5 @@ addpath /data1/fesd1/jthom143/piControl_paper/historical_surface_pressure_analys
 [ mpi_esm_lr_time_year    , mpi_esm_lr_SAM_unnormalized    , mpi_esm_lr_sam_trend_30    , mpi_esm_lr_sam_trend    , mpi_esm_lr_begin_time    , mpi_esm_lr_end_time    ] = MPI_ESM_LR_historical_ps;
 [ mpi_esm_mr_time_year    , mpi_esm_mr_SAM_unnormalized    , mpi_esm_mr_sam_trend_30    , mpi_esm_mr_sam_trend    , mpi_esm_mr_begin_time    , mpi_esm_mr_end_time    ] = MPI_ESM_MR_historical_ps;
 [ mri_cgcm3_time_year     , mri_cgcm3_SAM_unnormalized     , mri_cgcm3_sam_trend_30     , mri_cgcm3_sam_trend     , mri_cgcm3_begin_time     , mri_cgcm3_end_time     ] = MRI_CGCM3_historical_ps;
+[ nor_esm1m_m_time_year   , nor_esm1m_m_SAM_unnormalized   , nor_esm1m_m_sam_trend_30   , nor_esm1m_m_sam_trend   , nor_esm1m_m_begin_time   , nor_esm1m_m_end_time   ] = NOR_ESM1m_M_historical_ps;
 [ nor_esm1m_me_time_year  , nor_esm1m_me_SAM_unnormalized  , nor_esm1m_me_sam_trend_30  , nor_esm1m_me_sam_trend  , nor_esm1m_me_begin_time  , nor_esm1m_me_end_time  ] = NOR_ESM1m_ME_historical_ps;

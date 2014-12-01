@@ -51,9 +51,9 @@ addpath /data1/fesd1/jthom143/piControl_paper/tools
 
 trend_period = 25;
 
-[ ~, ~, sam_trend_30 ]   = NCEP1_trends_seasonal(trend_period);
-[ r2_sam_trend_30 ]      = NCEP2_trends_seasonal_ps(trend_period);
-[ era_int_sam_trend_30 ] = ERA_Interim_trends_seasonal_ps(trend_period);
+[ ~, ~, sam_trend_30, sam_DJF ]   = NCEP1_trends_seasonal(trend_period);
+[ r2_sam_trend_30, r2_sam_DJF ]      = NCEP2_trends_seasonal_ps(trend_period);
+[ era_int_sam_trend_30, era_int_sam_DJF ] = ERA_Interim_trends_seasonal_ps(trend_period);
 
 %%%%%%%%%%%%
 

@@ -1,4 +1,4 @@
-function [ jet_u850_trend_30, lat_u850_trend_30] = NCEP2_u850_trends_seasonal(trend_period)
+function [ jet_u850_trend_30, lat_u850_trend_30, jet_DJF, lat_jet_DJF] = NCEP2_u850_trends_seasonal(trend_period)
 
 %% Load and do windstress calculations
 

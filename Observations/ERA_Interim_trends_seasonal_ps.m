@@ -1,4 +1,4 @@
-function [ sam_trend_30 ] = ERA_Interim_trends_seasonal_ps(trend_period)
+function [ sam_trend_30, SAM_DJF ] = ERA_Interim_trends_seasonal_ps(trend_period)
 % NCEP1_trends calculates the linear trend in surface variables in order to
 % be compared to piControl model runs
 

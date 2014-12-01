@@ -29,7 +29,7 @@ time_year = 1860+yearnum;
 
 %% Jet Strength and Location Analysis
 
-[ jet_mon, lat_jet_mon, ~, ~, ~ ] = taux_findmax( taux, lat, time );                                              
+[ jet_mon, lat_jet_mon, ~, ~, ~ ] = taux_findmax_new( taux, lat, time );                                              
 
 %% Seasonal Analysis 
 

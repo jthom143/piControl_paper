@@ -67,7 +67,7 @@ lon = lon_matrix(1,:);
 %Change dimensions on taux for jet location analysis
 taux_mon = permute(taux, [2,1,3]);
 
-[ jet_mon, lat_jet_mon, ~, ~, ~ ] = taux_findmax( taux_mon, lat, time );     
+[ jet_mon, lat_jet_mon, ~, ~, ~ ] = taux_findmax_new( taux_mon, lat, time );     
 
 
 %% Seasonal Analysis 
@@ -110,6 +110,6 @@ end
 trend_period = 25;
 trend_length = 25;
 
-[jet_f, jet_xi, mean_jet, std_jet, jet_trends_yrs, jet_loc_f, jet_loc_xi, mean_jet_loc, std_jet_loc, jet_loc_trends_yrs] = Windstress_Trends( time_year, jet_DJF, lat_jet_DJF, trend_period, trend_length );
+[jet_f, jet_xi, mean_jet, std_jet, jet_trends_yrs, jet_loc_f, jet_loc_xi, mean_jet_loc, std_jet_loc, jet_loc_trends_yrs] = Windstress_Trends( time_year, jet_DJF, lat_jet_DJF, trend_period, trend_length, 'pdf' );
 
 end

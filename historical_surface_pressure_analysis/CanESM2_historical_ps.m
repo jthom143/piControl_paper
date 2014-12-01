@@ -1,11 +1,11 @@
-function [time_year, sam_DJF, sam_trend_30, sam_trend, begin_time, end_time ] = CanESM2_historical_ps
+function [time_year, sam_DJF, sam_trend_30, sam_trend, begin_time, end_time ] = CanESM2_historical_ps(filename)
 %UNTITLED Summary of this function goes here
 %   Detailed explanation goes here
 
 %% Import Data
 
 current_path = pwd;
-pathname_ps = fullfile(current_path,'HistoricalData/CanESM2_historical_r1i1p1_ps.cdf');
+pathname_ps = fullfile(current_path,'HistoricalData', filename);
 
 ps = ncread(pathname_ps, 'ps');                 % Pa
 time = ncread(pathname_ps, 'T');                % Months since 1850-01-01

@@ -31,7 +31,7 @@ addpath /data1/fesd1/jthom143/piControl_paper/tools
  [ cmcc_cms_jet_f        , cmcc_cms_jet_xi        , cmcc_cms_mean_jet        , cmcc_cms_std_jet        , cmcc_cms_jet_trends_yrs       , cmcc_cms_jet_loc_f            , cmcc_cms_jet_loc_xi           , cmcc_cms_mean_jet_loc       , cmcc_cms_std_jet_loc       , cmcc_cms_jet_loc_trends_yrs       , cmcc_cms_time_year       , cmcc_cms_jet_DJF       , cmcc_cms_jet_loc_DJF      ] = CMCC_CMs_taux_seasonal;
  [ cnrm_cm5_jet_f        , cnrm_cm5_jet_xi        , cnrm_cm5_mean_jet        , cnrm_cm5_std_jet        , cnrm_cm5_jet_trends_yrs       , cnrm_cm5_jet_loc_f            , cnrm_cm5_jet_loc_xi           , cnrm_cm5_mean_jet_loc       , cnrm_cm5_std_jet_loc       , cnrm_cm5_jet_loc_trends_yrs       , cnrm_cm5_time_year       , cnrm_cm5_jet_DJF       , cnrm_cm5_jet_loc_DJF      ] = CNRM_CM5_taux_seasonal;
  [ cnrm_cm52_jet_f       , cnrm_cm52_jet_xi       , cnrm_cm52_mean_jet       , cnrm_cm52_std_jet       , cnrm_cm52_jet_trends_yrs      , cnrm_cm52_jet_loc_f           , cnrm_cm52_jet_loc_xi          , cnrm_cm52_mean_jet_loc      , cnrm_cm52_std_jet_loc      , cnrm_cm52_jet_loc_trends_yrs      , cnrm_cm52_time_year      , cnrm_cm52_jet_DJF      , cnrm_cm52_jet_loc_DJF     ] = CNRM_CM52_taux_seasonal;
- [ gfdl_esm2g_jet_f      , gfdl_esm2g_jet_xi      , gfdl_esm2g_mean_jet      , gfdl_esm2g_std_jet      , gfdl_esm2g_jet_trends_yrs     , gfdl_esm2g_jet_loc_f          , gfdl_esm2g_jet_loc_xi         , gfdl_esm2g_mean_jet_loc     , gfdl_esm2g_std_jet_loc     , gfdl_esm2g_jet_loc_trends_yrs     , gfdl_esm2g_time_year     , gfdl_esm2g_jet_DJF     , gfdl_esm2g_jet_loc_DJF    ] = GFDL_ESM2G_taux_seasonal;
+%  [ gfdl_esm2g_jet_f      , gfdl_esm2g_jet_xi      , gfdl_esm2g_mean_jet      , gfdl_esm2g_std_jet      , gfdl_esm2g_jet_trends_yrs     , gfdl_esm2g_jet_loc_f          , gfdl_esm2g_jet_loc_xi         , gfdl_esm2g_mean_jet_loc     , gfdl_esm2g_std_jet_loc     , gfdl_esm2g_jet_loc_trends_yrs     , gfdl_esm2g_time_year     , gfdl_esm2g_jet_DJF     , gfdl_esm2g_jet_loc_DJF    ] = GFDL_ESM2G_taux_seasonal;
  [ gfdl_esm2m_jet_f      , gfdl_esm2m_jet_xi      , gfdl_esm2m_mean_jet      , gfdl_esm2m_std_jet      , gfdl_esm2m_jet_trends_yrs     , gfdl_esm2m_jet_loc_f          , gfdl_esm2m_jet_loc_xi         , gfdl_esm2m_mean_jet_loc     , gfdl_esm2m_std_jet_loc     , gfdl_esm2m_jet_loc_trends_yrs     , gfdl_esm2m_time_year     , gfdl_esm2m_jet_DJF     , gfdl_esm2m_jet_loc_DJF    ] = GFDL_ESM2M_taux_seasonal;
  [ ipsl_cm5a_lr_jet_f    , ipsl_cm5a_lr_jet_xi    , ipsl_cm5a_lr_mean_jet    , ipsl_cm5a_lr_std_jet    , ipsl_cm5a_lr_jet_trends_yrs   , ipsl_cm5a_lr_jet_loc_f        , ipsl_cm5a_lr_jet_loc_xi       , ipsl_cm5a_lr_mean_jet_loc   , ipsl_cm5a_lr_std_jet_loc   , ipsl_cm5a_lr_jet_loc_trends_yrs   , ipsl_cm5a_lr_time_year   , ipsl_cm5a_lr_jet_DJF   , ipsl_cm5a_lr_jet_loc_DJF  ] = IPSL_CM5a_LR_taux_seasonal;
  [ ipsl_cm5a_mr_jet_f    , ipsl_cm5a_mr_jet_xi    , ipsl_cm5a_mr_mean_jet    , ipsl_cm5a_mr_std_jet    , ipsl_cm5a_mr_jet_trends_yrs   , ipsl_cm5a_mr_jet_loc_f        , ipsl_cm5a_mr_jet_loc_xi       , ipsl_cm5a_mr_mean_jet_loc   , ipsl_cm5a_mr_std_jet_loc   , ipsl_cm5a_mr_jet_loc_trends_yrs   , ipsl_cm5a_mr_time_year   , ipsl_cm5a_mr_jet_DJF   , ipsl_cm5a_mr_jet_loc_DJF  ] = IPSL_CM5a_MR_taux_seasonal;
@@ -46,8 +46,8 @@ addpath /data1/fesd1/jthom143/piControl_paper/tools
  [ nor_esm1m_me_jet_f    , nor_esm1m_me_jet_xi    , nor_esm1m_me_mean_jet    , nor_esm1m_me_std_jet    , nor_esm1m_me_jet_trends_yrs   , nor_esm1m_me_jet_loc_f        , nor_esm1m_me_jet_loc_xi       , nor_esm1m_me_mean_jet_loc   , nor_esm1m_me_std_jet_loc   , nor_esm1m_me_jet_loc_trends_yrs   , nor_esm1m_me_time_year   , nor_esm1m_me_jet_DJF   , nor_esm1m_me_jet_loc_DJF  ] = NOR_ESM1m_ME_taux_seasonal;
 
 % GFDL Models
- [ cm2mc_jet_f    , cm2mc_jet_xi    , cm2mc_mean_jet    , cm2mc_std_jet    , cm2mc_jet_trends_yrs   , cm2mc_jet_loc_f        , cm2mc_jet_loc_xi       , cm2mc_mean_jet_loc   , cm2mc_std_jet_loc   , cm2mc_jet_loc_trends_yrs   , cm2mc_time_year, cm2mc_jet_DJF, cm2mc_jet_loc_DJF] = CM2Mc_taux_seasonal;
- [ cm21_jet_f    , cm21_jet_xi    , cm21_mean_jet    , cm21_std_jet    , cm21_jet_trends_yrs   , cm21_jet_loc_f        , cm21_jet_loc_xi       , cm21_mean_jet_loc   , cm21_std_jet_loc   , cm21_jet_loc_trends_yrs   , cm21_time_year, cm21_jet_DJF, cm21_jet_loc_DJF] = CM21_taux_seasonal;
+%  [ cm2mc_jet_f    , cm2mc_jet_xi    , cm2mc_mean_jet    , cm2mc_std_jet    , cm2mc_jet_trends_yrs   , cm2mc_jet_loc_f        , cm2mc_jet_loc_xi       , cm2mc_mean_jet_loc   , cm2mc_std_jet_loc   , cm2mc_jet_loc_trends_yrs   , cm2mc_time_year, cm2mc_jet_DJF, cm2mc_jet_loc_DJF] = CM2Mc_taux_seasonal;
+%  [ cm21_jet_f    , cm21_jet_xi    , cm21_mean_jet    , cm21_std_jet    , cm21_jet_trends_yrs   , cm21_jet_loc_f        , cm21_jet_loc_xi       , cm21_mean_jet_loc   , cm21_std_jet_loc   , cm21_jet_loc_trends_yrs   , cm21_time_year, cm21_jet_DJF, cm21_jet_loc_DJF] = CM21_taux_seasonal;
 
  
 % NCEP Reanalyses 
@@ -55,7 +55,7 @@ addpath /data1/fesd1/jthom143/piControl_paper/tools
 trend_period = 30;
 
 [ taux_trend_30, lat_trend_30,~] = NCEP1_trends_seasonal(trend_period);
-%[ taux_trend_30_2, ~, lat_trend_30_2, ~, ~, ~ ] = NCEP2_trends(trend_period);
+[ taux_trend_30_2, ~, lat_trend_30_2, ~, ~, ~ ] = NCEP2_trends(trend_period);
 
 
 % Create matrix with all the model trend vectors
@@ -67,7 +67,7 @@ Trends(4, 1:length(cmcc_cm_jet_trends_yrs)) = cmcc_cm_jet_trends_yrs;
 Trends(5, 1:length(cmcc_cms_jet_trends_yrs)) = cmcc_cms_jet_trends_yrs;
 Trends(6, 1:length(cnrm_cm5_jet_trends_yrs)) = cnrm_cm5_jet_trends_yrs;
 Trends(7, 1:length(cnrm_cm52_jet_trends_yrs)) = cnrm_cm52_jet_trends_yrs;
-Trends(8, 1:length(gfdl_esm2g_jet_trends_yrs)) = gfdl_esm2g_jet_trends_yrs;
+% Trends(8, 1:length(gfdl_esm2g_jet_trends_yrs)) = gfdl_esm2g_jet_trends_yrs;
 Trends(9, 1:length(gfdl_esm2m_jet_trends_yrs)) = gfdl_esm2m_jet_trends_yrs;
 Trends(10, 1:length(ipsl_cm5a_lr_jet_trends_yrs)) = ipsl_cm5a_lr_jet_trends_yrs;
 Trends(11, 1:length(ipsl_cm5a_mr_jet_trends_yrs)) = ipsl_cm5a_mr_jet_trends_yrs;
@@ -80,8 +80,8 @@ Trends(17, 1:length(mpi_esm_mr_jet_trends_yrs)) = mpi_esm_mr_jet_trends_yrs;
 Trends(18, 1:length(mri_cgcm3_jet_trends_yrs)) = mri_cgcm3_jet_trends_yrs;
 %Trends(19, 1:length(nor_esm1m_m_jet_trends_yrs)) = nor_esm1m_m_jet_trends_yrs;
 Trends(20, 1:length(nor_esm1m_me_jet_trends_yrs)) = nor_esm1m_me_jet_trends_yrs;
-Trends(21, 1:length(cm2mc_jet_trends_yrs)) = cm2mc_jet_trends_yrs;
-Trends(22, 1:length(cm21_jet_trends_yrs)) = cm21_jet_trends_yrs;
+% Trends(21, 1:length(cm2mc_jet_trends_yrs)) = cm2mc_jet_trends_yrs;
+% Trends(22, 1:length(cm21_jet_trends_yrs)) = cm21_jet_trends_yrs;
 
 
 % Calculate the 95th percentile of the trends for all the models 
@@ -101,7 +101,7 @@ Trends_jet_loc(4, 1:length(cmcc_cm_jet_loc_trends_yrs)) = cmcc_cm_jet_loc_trends
 Trends_jet_loc(5, 1:length(cmcc_cms_jet_loc_trends_yrs)) = cmcc_cms_jet_loc_trends_yrs;
 Trends_jet_loc(6, 1:length(cnrm_cm5_jet_loc_trends_yrs)) = cnrm_cm5_jet_loc_trends_yrs;
 Trends_jet_loc(7, 1:length(cnrm_cm52_jet_loc_trends_yrs)) = cnrm_cm52_jet_loc_trends_yrs;
-Trends_jet_loc(8, 1:length(gfdl_esm2g_jet_loc_trends_yrs)) = gfdl_esm2g_jet_loc_trends_yrs;
+% Trends_jet_loc(8, 1:length(gfdl_esm2g_jet_loc_trends_yrs)) = gfdl_esm2g_jet_loc_trends_yrs;
 Trends_jet_loc(9, 1:length(gfdl_esm2m_jet_loc_trends_yrs)) = gfdl_esm2m_jet_loc_trends_yrs;
 Trends_jet_loc(10, 1:length(ipsl_cm5a_lr_jet_loc_trends_yrs)) = ipsl_cm5a_lr_jet_loc_trends_yrs;
 Trends_jet_loc(11, 1:length(ipsl_cm5a_mr_jet_loc_trends_yrs)) = ipsl_cm5a_mr_jet_loc_trends_yrs;
@@ -114,8 +114,8 @@ Trends_jet_loc(17, 1:length(mpi_esm_mr_jet_loc_trends_yrs)) = mpi_esm_mr_jet_loc
 Trends_jet_loc(18, 1:length(mri_cgcm3_jet_loc_trends_yrs)) = mri_cgcm3_jet_loc_trends_yrs;
 %Trends_jet_loc(19, 1:length(nor_esm1m_m_jet_loc_trends_yrs)) = nor_esm1m_m_jet_loc_trends_yrs;
 Trends_jet_loc(20, 1:length(nor_esm1m_me_jet_loc_trends_yrs)) = nor_esm1m_me_jet_loc_trends_yrs;
-Trends_jet_loc(21, 1:length(cm2mc_jet_loc_trends_yrs)) = cm2mc_jet_loc_trends_yrs;
-Trends_jet_loc(22, 1:length(cm21_jet_loc_trends_yrs)) = cm21_jet_loc_trends_yrs;
+% Trends_jet_loc(21, 1:length(cm2mc_jet_loc_trends_yrs)) = cm2mc_jet_loc_trends_yrs;
+% Trends_jet_loc(22, 1:length(cm21_jet_loc_trends_yrs)) = cm21_jet_loc_trends_yrs;
 
 
 percentile_loc = prctile(Trends_jet_loc, 95, 2);

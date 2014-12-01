@@ -1,4 +1,4 @@
-function [ taux_trend_30, lat_trend_30, sam_trend_30 ] = NCEP1_trends_seasonal(trend_period)
+function [ taux_trend_30, lat_trend_30, sam_trend_30, SAM_DJF ] = NCEP1_trends_seasonal(trend_period)
 % NCEP1_trends calculates the linear trend in surface variables in order to
 % be compared to CM2Mc
 
@@ -175,7 +175,7 @@ SAM_DJF_index = SAM_DJF_index(:,2)';
  
 %% Calculate linear trend for 1979-present 
 begin_time = 2; %1980
-end_time = 25; % 2005
+end_time = 27; % 2005
 
 % Jet magnitude
 

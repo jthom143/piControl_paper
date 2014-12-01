@@ -48,9 +48,9 @@ Type = 'pdf';
 
 trend_period = 25;
 
-[ jet_u850_trend_30        , lat_u850_trend_30]         = NCEP1_u850_trends_seasonal(trend_period);
-[ r2_jet_u850_trend_30     , r2_lat_u850_trend_30]      = NCEP2_u850_trends_seasonal(trend_period);
-[ era_int_jet_u850_trend_30, era_int_lat_u850_trend_30] = ERA_Interim_u850_trends_seasonal(trend_period);
+[ jet_u850_trend_30        , lat_u850_trend_30, jet_DJF, lat_jet_DJF]         = NCEP1_u850_trends_seasonal(trend_period);
+[ r2_jet_u850_trend_30     , r2_lat_u850_trend_30, r2_jet_DJF, r2_let_jet_DJF]      = NCEP2_u850_trends_seasonal(trend_period);
+[ era_int_jet_u850_trend_30, era_int_lat_u850_trend_30, eta_int_jet_DJF, eta_int_lat_jet_DJF] = ERA_Interim_u850_trends_seasonal(trend_period);
 
 
 % Create matrix with all the model trend vectors

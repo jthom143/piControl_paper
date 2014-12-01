@@ -1,4 +1,4 @@
-function [ jet_u850_trend_30, lat_u850_trend_30] = ERA_Interim_u850_trends_seasonal(trend_period)
+function [ jet_u850_trend_30, lat_u850_trend_30, jet_DJF, lat_jet_DJF] = ERA_Interim_u850_trends_seasonal(trend_period)
 
 %% Load and do windstress calculations
 
@@ -90,4 +90,4 @@ lat_u850_trend = polyfit(time_year(1:25),lat_jet_DJF(1:25),1); % Units: Pa/year
 lat_u850_trend_30 = lat_u850_trend(1).*trend_period; % Units: Pa/30 yrs
 
 
-
+cd /data1/fesd1/jthom143/piControl_paper
