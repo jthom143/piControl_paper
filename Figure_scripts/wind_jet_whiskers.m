@@ -270,6 +270,8 @@ set(gca, 'XTickLabel', x_label)
 set(gca, 'XTick', 0:16)
 rotateXLabels( gca, 45 )
 ylim([-2.2 2.2])
+title('Wind Jet Magnitude 25 year linear trends')
+ylabel('m/s/25 years')
 
 print -depsc allmodels_jet_mag_whiskers_ensemble
 
@@ -302,6 +304,8 @@ set(gca, 'XTickLabel', x_label)
 set(gca, 'XTick', 0:16)
 rotateXLabels( gca, 45 )
 ylim([-6 6])
+title('Wind Jet Location 25 year linear trends')
+ylabel('Degrees Latitude/25 years')
 
 print -depsc allmodels_jet_loc_whiskers_ensemble
 
