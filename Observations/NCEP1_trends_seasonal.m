@@ -1,4 +1,4 @@
-function [ taux_trend_30, lat_trend_30, sam_trend_30, SAM_DJF ] = NCEP1_trends_seasonal(trend_period)
+function [ taux_trend_30, lat_trend_30, sam_trend_30, SAM_DJF, jet_DJF, lat_jet_DJF ] = NCEP1_trends_seasonal(trend_period)
 % NCEP1_trends calculates the linear trend in surface variables in order to
 % be compared to CM2Mc
 
