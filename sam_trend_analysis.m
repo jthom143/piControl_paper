@@ -131,11 +131,11 @@ model_labels = {'   ';'CanESM2';'CCSM4';'CMCC CESM'; 'CMCC CM'; 'CMCC CMs'; 'CNR
 Trends = NaN*ones(22,4000);
 Trends(1, 1:length(can_esm2_sam_trends_yrs)) = can_esm2_sam_trends_yrs;
 Trends(2, 1:length(ccsm4_sam_trends_yrs)) = ccsm4_sam_trends_yrs;
-Trends(3, 1:length(cmcc_cesm_sam_trends_yrs)) = cmcc_cesm_sam_trends_yrs;
-Trends(4, 1:length(cmcc_cm_sam_trends_yrs)) = cmcc_cm_sam_trends_yrs;
-Trends(5, 1:length(cmcc_cms_sam_trends_yrs)) = cmcc_cms_sam_trends_yrs;
+%Trends(3, 1:length(cmcc_cesm_sam_trends_yrs)) = cmcc_cesm_sam_trends_yrs;
+%Trends(4, 1:length(cmcc_cm_sam_trends_yrs)) = cmcc_cm_sam_trends_yrs;
+%Trends(5, 1:length(cmcc_cms_sam_trends_yrs)) = cmcc_cms_sam_trends_yrs;
 Trends(6, 1:length(cnrm_cm5_sam_trends_yrs)) = cnrm_cm5_sam_trends_yrs;
-Trends(7, 1:length(cnrm_cm52_sam_trends_yrs)) = cnrm_cm52_sam_trends_yrs;
+%Trends(7, 1:length(cnrm_cm52_sam_trends_yrs)) = cnrm_cm52_sam_trends_yrs;
 Trends(8, 1:length(gfdl_esm2g_sam_trends_yrs)) = gfdl_esm2g_sam_trends_yrs;
 Trends(9, 1:length(gfdl_esm2m_sam_trends_yrs)) = gfdl_esm2m_sam_trends_yrs;
 Trends(10, 1:length(ipsl_cm5a_lr_sam_trends_yrs)) = ipsl_cm5a_lr_sam_trends_yrs;
@@ -149,8 +149,8 @@ Trends(17, 1:length(mpi_esm_mr_sam_trends_yrs)) = mpi_esm_mr_sam_trends_yrs;
 Trends(18, 1:length(mri_cgcm3_sam_trends_yrs)) = mri_cgcm3_sam_trends_yrs;
 Trends(19, 1:length(nor_esm1m_m_sam_trends_yrs)) = nor_esm1m_m_sam_trends_yrs;
 Trends(20, 1:length(nor_esm1m_me_sam_trends_yrs)) = nor_esm1m_me_sam_trends_yrs;
-Trends(21, 1:length(cm2mc_sam_trends_yrs)) = cm2mc_sam_trends_yrs;
-Trends(22, 1:length(cm21_sam_trends_yrs)) = cm21_sam_trends_yrs;
+%Trends(21, 1:length(cm2mc_sam_trends_yrs)) = cm2mc_sam_trends_yrs;
+%Trends(22, 1:length(cm21_sam_trends_yrs)) = cm21_sam_trends_yrs;
 
 
 Models = {'CanESM2';'CCSM4';'CMCC CESM'; 'CMCC CM'; 'CMCC CMs'; 'CNRM CM5'; 'CNRM CM5-2';'GFDL ESM2G';'GFDL ESM2M'; 'IPSL CM5a LR'; 'IPSL CM5a MR';...
