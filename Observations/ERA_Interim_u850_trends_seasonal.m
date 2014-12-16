@@ -80,49 +80,49 @@ lat_jet_DJF = lat_jet_DJF(:,2)';
 
 % Jet magnitude
 
-jet_u850_trend = polyfit(time_year(10:34),jet_DJF(10:34),1); % Units: Pa/year
+jet_u850_trend = polyfit(time_year(1:25),jet_DJF(1:25),1); % Units: Pa/year
 jet_u850_trend_30 = jet_u850_trend(1).*trend_period; % Units: Pa/30 yrs
 
 
 % Jet Location
 
-lat_u850_trend = polyfit(time_year(10:34),lat_jet_DJF(10:34),1); % Units: Pa/year
+lat_u850_trend = polyfit(time_year(1:25),lat_jet_DJF(1:25),1); % Units: Pa/year
 lat_u850_trend_30 = lat_u850_trend(1).*trend_period; % Units: Pa/30 yrs
 
 
 cd /data1/fesd1/jthom143/piControl_paper
 
 %% figure
-% Defaults for figures
-width = 6;     % Width in inches
-height = 3;    % Height in inches
-alw = 0.75;    % AxesLineWidth
-fsz = 12;      % Fontsize
-lw = 1.5;      % LineWidth
-msz = 8;       % MarkerSize
-
-jet_DJF_smoothed = interp1(time_year, jet_DJF, 1980:(1/4):2014,'cubic');
-lat_jet_DJF_smoothed = interp1(time_year, lat_jet_DJF, 1980:(1/4):2014,'cubic');
-
-
-figure(1)
-h1 = plot(1980:(1/4):2014, jet_DJF_smoothed, 'linewidth', lw, 'color', [1,0/255,0]);
-pos = get(gcf, 'Position');
-xlim([1980 2014])
-set(gca, 'fontsize', fsz)
-ylabel('Wind speed (m s^{-1})')
-xlabel('Time (years)')
-set(gcf, 'Position', [pos(1) pos(2) width*100, height*100]); %<- Set size
-
-figure(2)
-h1 = plot(1980:(1/4):2014, lat_jet_DJF_smoothed, 'linewidth', lw, 'color', [1,0/255,0]);
-pos = get(gcf, 'Position');
-xlim([1980 2014])
-set(gca, 'fontsize', fsz)
-ylabel('Latitude (Degrees)')
-xlabel('Time (years)')
-set(gcf, 'Position', [pos(1) pos(2) width*100, height*100]); %<- Set size
-
-
+% % Defaults for figures
+% width = 6;     % Width in inches
+% height = 3;    % Height in inches
+% alw = 0.75;    % AxesLineWidth
+% fsz = 12;      % Fontsize
+% lw = 1.5;      % LineWidth
+% msz = 8;       % MarkerSize
+% 
+% jet_DJF_smoothed = interp1(time_year, jet_DJF, 1980:(1/4):2014,'cubic');
+% lat_jet_DJF_smoothed = interp1(time_year, lat_jet_DJF, 1980:(1/4):2014,'cubic');
+% 
+% 
+% figure(1)
+% h1 = plot(1980:(1/4):2014, jet_DJF_smoothed, 'linewidth', lw, 'color', [1,0/255,0]);
+% pos = get(gcf, 'Position');
+% xlim([1980 2014])
+% set(gca, 'fontsize', fsz)
+% ylabel('Wind speed (m s^{-1})')
+% xlabel('Time (years)')
+% set(gcf, 'Position', [pos(1) pos(2) width*100, height*100]); %<- Set size
+% 
+% figure(2)
+% h1 = plot(1980:(1/4):2014, lat_jet_DJF_smoothed, 'linewidth', lw, 'color', [1,0/255,0]);
+% pos = get(gcf, 'Position');
+% xlim([1980 2014])
+% set(gca, 'fontsize', fsz)
+% ylabel('Latitude (Degrees)')
+% xlabel('Time (years)')
+% set(gcf, 'Position', [pos(1) pos(2) width*100, height*100]); %<- Set size
+% 
+% 
 
 
