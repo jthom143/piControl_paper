@@ -7,7 +7,6 @@ function [ SAM, SAM_unnormalized ] = SAM_calculate( lat, slp )
 %   dividing by the standard deviation. 
 
 
-
 % Find indicies of 40 and 65 degrees S
 lat_40 = findnearest(-40,lat);
 lat_65 = findnearest(-65,lat);
@@ -20,15 +19,21 @@ slp_zonalavg = squeeze(nanmean(slp));
 SAM_unnormalized = slp_zonalavg(lat_40,:) - slp_zonalavg(lat_65,:); 
 
 % Calculate the mean and standard deviation of the unnormalized SAM 
-SAM_mean = nanmean(SAM_unnormalized);
-SAM_std = nanstd(SAM_unnormalized);
+SAM_mean_40 = nanmean(slp_zonalavg(lat_40,:));
+SAM_std_40 = nanstd(slp_zonalavg(lat_40,:));
+
+SAM_mean_65 = nanmean(slp_zonalavg(lat_65,:));
+SAM_std_65 = nanstd(slp_zonalavg(lat_65,:));
 
 % Normalize the SAM Index 
-SAM = (SAM_unnormalized - SAM_mean)./SAM_std;
+SAM = (slp_zonalavg(lat_40,:)-SAM_mean_40)./SAM_std_40 - (slp_zonalavg(lat_65,:)-SAM_mean_65)./SAM_std_65;
 
 
 
 
 
 end
+
+
+
 
