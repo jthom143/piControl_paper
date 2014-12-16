@@ -88,5 +88,37 @@ lat_u850_trend_30 = lat_u850_trend(1).*trend_period; % Units: Pa/30 yrs
 
 
 
+%% Create time series figure
+
+% Defaults for figures
+width = 6;     % Width in inches
+height = 3;    % Height in inches
+alw = 0.75;    % AxesLineWidth
+fsz = 12;      % Fontsize
+lw = 1.5;      % LineWidth
+msz = 8;       % MarkerSize
+ 
+jet_DJF_smoothed = interp1(time_year, jet_DJF, 1979:(1/4):2005,'cubic');
+lat_jet_DJF_smoothed = interp1(time_year, lat_jet_DJF, 1979:(1/4):2005,'cubic');
+
+figure(1)
+h1 = plot(1979:(1/4):2005, jet_DJF_smoothed, 'linewidth', lw, 'color', [0,0,1]);
+pos = get(gcf, 'Position');
+xlim([1980 2006])
+set(gca, 'fontsize', fsz)
+ylabel('Wind speed (m s^{-1})')
+xlabel('Time (years)')
+set(gcf, 'Position', [pos(1) pos(2) width*100, height*100]); %<- Set size
+
+figure(2)
+h1 = plot(1979:(1/4):2005, lat_jet_DJF_smoothed, 'linewidth', lw, 'color', [0,0,1]);
+pos = get(gcf, 'Position');
+xlim([1980 2006])
+set(gca, 'fontsize', fsz)
+ylabel('Latitude (Degrees)')
+xlabel('Time (years)')
+set(gcf, 'Position', [pos(1) pos(2) width*100, height*100]); %<- Set size
+
+
 end
 
