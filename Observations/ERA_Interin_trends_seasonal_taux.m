@@ -1,25 +1,27 @@
-function [ taux_trend_25, lat_trend_25, jet_DJF, lat_jet_DJF ] = NCEP2_trends_seasonal_taux(trend_period)
+function [ taux_trend_25, lat_trend_25, jet_DJF, lat_jet_DJF ] = ERA_Interin_trends_seasonal_taux(trend_period)
 % NCEP1_trends calculates the linear trend in surface variables in order to
 % be compared to piControl Model Runs
 
 %% Open NetCDF File 
-cd /data1/fesd1/jthom143/NCEP_Reanalyses/Data
+cd /data1/fesd1/waugh/ERA_INTERIM
 
-filename = 'taux.mon.mean.r2.nc'; 
+filename = 'iews_197901_201406.nc'; 
 
 % Load in variables from first file
 
-taux2 = ncread(filename, 'uflx');
-lat = ncread(filename, 'lat');
-lon = ncread(filename, 'lon');
+taux = ncread(filename, 'iews');
+lat = ncread(filename, 'latitude');
+lon = ncread(filename, 'longitude');
 time = ncread(filename, 'time');
 
-taux = -taux2;
+time = double(time);
+lat = double(lat);
+taux = double(taux);
 
 % Create useful time vectors 
 
 dayssince111=time/24;
-datevalue=dayssince111+datenum([1800,1,1]);	
+datevalue=dayssince111+datenum([1900,1,1]);	
 DateVec = datevec(datevalue);
 
 time_month = (1979:1/12:2013);
@@ -29,7 +31,7 @@ time_month = time_month';
 
 % Annual average wind stress analysis 
 
-taux_ann = -9999*ones(length(lon), length(lat), 34);
+taux_ann = -9999*ones(length(lon), length(lat), 36);
 
 for ii = 1:length(lon)
     for jj = 1:length(lat)
