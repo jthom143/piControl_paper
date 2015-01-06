@@ -17,10 +17,9 @@
 % addpath /Users/jordanthomas/Desktop/Research/NCEPReanalysis2
 % addpath /Users/jordanthomas/Documents/MATLAB/GeneralFunctions
 
-addpath /home/jthom143/NCEPReanalysis1
-addpath /home/jthom143/NCEPReanalysis2
 addpath /data1/fesd1/jthom143/piControl_paper/windstress_analysis
 addpath /data1/fesd1/jthom143/piControl_paper/tools
+addpath /data1/fesd1/jthom143/piControl_paper/Observations
 
 %% Trend Analysis
 
@@ -54,9 +53,8 @@ addpath /data1/fesd1/jthom143/piControl_paper/tools
 
 trend_period = 30;
 
-[ taux_trend_30, lat_trend_30,~] = NCEP1_trends_seasonal(trend_period);
-[ taux_trend_30_2, ~, lat_trend_30_2, ~, ~, ~ ] = NCEP2_trends(trend_period);
-
+[ taux_trend_25  , lat_trend_25  ,~,~,~,~] = NCEP1_trends_seasonal(trend_period);
+[ taux_trend_25_2, lat_trend_25_2, jet_DJF, lat_jet_DJF ] = NCEP2_trends_seasonal_taux(trend_period);
 
 % Create matrix with all the model trend vectors
 Trends = NaN*ones(22,4000);

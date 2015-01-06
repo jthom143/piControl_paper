@@ -105,8 +105,8 @@ figure(1)
 h1 = errorbar(x_axis,mean_trend_jet_mag,2.*std_trend_jet_mag);
 hold on 
 h2 = plot(x_axis, historical_trend, 'r*');
-h3 = hline(taux_trend_30);
-h4 = hline(taux_trend_30_2);
+h3 = hline(taux_trend_25);
+h4 = hline(taux_trend_25_2);
 % h5 = hline(era_int_jet_u850_trend_30);
 set(h3, 'linestyle', '- -', 'linewidth', 2, 'color', [0, 0.8, 0])
 set(h4, 'linestyle', '- -', 'linewidth', 2, 'color', [0.9 0.6 0.2])
@@ -124,8 +124,8 @@ figure(2)
 h1 = errorbar(x_axis,mean_trend_jet_loc,2.*std_trend_jet_loc);
 hold on 
 h2 = plot(x_axis, historical_trend_loc, 'r*');
-h3 = hline(lat_trend_30);
-h4 = hline(lat_trend_30_2);
+h3 = hline(lat_trend_25);
+h4 = hline(lat_trend_25_2);
 % h5 = hline(era_int_lat_u850_trend_30);
 set(h3, 'linestyle', '-', 'linewidth', 2, 'color', [0, 0.8, 0])
 set(h4, 'linestyle', '- -', 'linewidth', 2, 'color', [0.9 0.6 0.2])
