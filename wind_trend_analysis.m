@@ -19,7 +19,7 @@ addpath /data1/fesd1/jthom143/piControl_paper/Observations
 
 %% Trend Analysis
 
-Type = 'pdf';
+Type = 'cdf';
 
 [ can_esm2_jet_f        , can_esm2_jet_xi        , can_esm2_mean_jet        , can_esm2_std_jet        , can_esm2_jet_trends_yrs       , can_esm2_jet_loc_f            , can_esm2_jet_loc_xi           , can_esm2_mean_jet_loc       , can_esm2_std_jet_loc       , can_esm2_jet_loc_trends_yrs       , can_esm2_time_year       , can_esm2_jet_DJF       , can_esm2_jet_loc_DJF      ] = CanESM2_u850_seasonal(Type);
 [ ccsm4_jet_f           , ccsm4_jet_xi           , ccsm4_mean_jet           , ccsm4_std_jet           , ccsm4_jet_trends_yrs          , ccsm4_jet_loc_f               , ccsm4_jet_loc_xi              , ccsm4_mean_jet_loc          , ccsm4_std_jet_loc          , ccsm4_jet_loc_trends_yrs          , ccsm4_time_year          , ccsm4_jet_DJF          , ccsm4_jet_loc_DJF         ] = CCSM4_u850_seasonal(Type);
