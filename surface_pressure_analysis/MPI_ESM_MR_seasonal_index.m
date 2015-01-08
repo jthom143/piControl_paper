@@ -1,4 +1,4 @@
-function [ sam_f, sam_xi, mean_sam, std_sam, time_year, sam_DJF ,sam_trends_yrs ] = MPI_ESM_MR_seasonal_index
+function [ sam_f, sam_xi, mean_sam, std_sam, time_year, sam_DJF ,sam_trends_yrs ] = MPI_ESM_MR_seasonal_index(Type)
 %UNTITLED Summary of this function goes here
 %   Detailed explanation goes here
 
@@ -75,7 +75,7 @@ sam_DJF = sam_DJF(:,2)';
 trend_period = 25;
 trend_length = 25;
 
-[ sam_f, sam_xi, mean_sam, std_sam,sam_trends_yrs] = SAM_Trends( time_year, sam_DJF, trend_period, trend_length );
+[ sam_f, sam_xi, mean_sam, std_sam,sam_trends_yrs] = SAM_Trends( time_year, sam_DJF, trend_period, trend_length,Type );
 
 
 

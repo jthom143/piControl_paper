@@ -12,39 +12,37 @@
 % close all
 % clear all
 
-% addpath /Users/jordanthomas/Desktop/Research/NCEPReanalysis1
-% addpath /Users/jordanthomas/Desktop/Research/NCEPReanalysis2
-% addpath /Users/jordanthomas/Documents/MATLAB/GeneralFunctions
-
 addpath /data1/fesd1/jthom143/piControl_paper/surface_pressure_analysis
 addpath /data1/fesd1/jthom143/piControl_paper/Observations
 addpath /data1/fesd1/jthom143/piControl_paper/tools
 
 %% Trend Analysis
 
-[ can_esm2_sam_f      , can_esm2_sam_xi      , can_esm2_mean_sam      , can_esm2_std_sam      , can_esm2_time_year      , can_esm2_SAM_unnormalized       , can_esm2_sam_trends_yrs      ] = CanESM2_seasonal;
-[ ccsm4_sam_f         , ccsm4_sam_xi         , ccsm4_mean_sam         , ccsm4_std_sam         , ccsm4_time_year         , ccsm4_SAM_unnormalized          , ccsm4_sam_trends_yrs         ] = CCSM4_seasonal;
-[ cmcc_cesm_sam_f     , cmcc_cesm_sam_xi     , cmcc_cesm_mean_sam     , cmcc_cesm_std_sam     , cmcc_cesm_time_year     , cmcc_cesm_SAM_unnormalized      , cmcc_cesm_sam_trends_yrs     ] = CMCC_CESM_seasonal;
-[ cmcc_cm_sam_f       , cmcc_cm_sam_xi       , cmcc_cm_mean_sam       , cmcc_cm_std_sam       , cmcc_cm_time_year       , cmcc_cm_SAM_unnormalized        , cmcc_cm_sam_trends_yrs       ] = CMCC_CM_seasonal;
-[ cmcc_cms_sam_f      , cmcc_cms_sam_xi      , cmcc_cms_mean_sam      , cmcc_csm_std_sam      , cmcc_csm_time_year      , cmcc_csm_SAM_unnormalized       , cmcc_cms_sam_trends_yrs      ] = CMCC_CMs_seasonal;
-[ cnrm_cm5_sam_f      , cnrm_cm5_sam_xi      , cnrm_cm5_mean_sam      , cnrm_cm5_std_sam      , cnrm_cm5_time_year      , cnrm_cm5_SAM_unnormalized       , cnrm_cm5_sam_trends_yrs      ] = CNRM_CM5_seasonal;
-[ cnrm_cm52_sam_f     , cnrm_cm52_sam_xi     , cnrm_cm52_mean_sam     , cnrm_cm52_std_sam     , cnrm_cm52_time_year     , cnrm_cm52_SAM_unnormalized      , cnrm_cm52_sam_trends_yrs     ] = CNRM_CM52_seasonal;
-[ gfdl_esm2g_sam_f    , gfdl_esm2g_sam_xi    , gfdl_esm2g_mean_sam    , gfdl_esm2g_std_sam    , gfdl_esm2g_time_year    , gfdl_esm2g_SAM_unnormalized     , gfdl_esm2g_sam_trends_yrs    ] = GFDL_ESM2G_seasonal;
-[ gfdl_esm2m_sam_f    , gfdl_esm2m_sam_xi    , gfdl_esm2m_mean_sam    , gfdl_esm2m_std_sam    , gfdl_esm2m_time_year    , gfdl_esm2m_SAM_unnormalized     , gfdl_esm2m_sam_trends_yrs    ] = GFDL_ESM2M_seasonal;
-[ ipsl_cm5a_lr_sam_f  , ipsl_cm5a_lr_sam_xi  , ipsl_cm5a_lr_mean_sam  , ipsl_cm5a_lr_std_sam  , ipsl_cm5a_lr_time_year  , ipsl_cm5a_lr_SAM_unnormalized   , ipsl_cm5a_lr_sam_trends_yrs  ] = IPSL_CM5a_LR_seasonal;
-[ ipsl_cm5a_mr_sam_f  , ipsl_cm5a_mr_sam_xi  , ipsl_cm5a_mr_mean_sam  , ipsl_cm5a_mr_std_sam  , ipsl_cm5a_mr_time_year  , ipsl_cm5a_mr_SAM_unnormalized   , ipsl_cm5a_mr_sam_trends_yrs  ] = IPSL_CM5a_MR_seasonal;
-[ ipsl_cm5b_lr_sam_f  , ipsl_cm5b_lr_sam_xi  , ipsl_cm5b_lr_mean_sam  , ipsl_cm5b_lr_std_sam  , ipsl_cm5b_lr_time_year  , ipsl_cm5b_lr_SAM_unnormalized   , ipsl_cm5b_lr_sam_trends_yrs  ] = IPSL_CM5b_LR_seasonal;
-[ miroc5_sam_f        , miroc5_sam_xi        , miroc5_mean_sam        , miroc5_std_sam        , miroc5_time_year        , miroc5_SAM_unnormalized         , miroc5_sam_trends_yrs        ] = MIROC5_seasonal;
-[ miroc_esm_sam_f     , miroc_esm_sam_xi     , miroc_esm_mean_sam     , miroc_esm_std_sam     , miroc_esm_time_year     , miroc_esm_SAM_unnormalized      , miroc_esm_sam_trends_yrs     ] = MIROC_ESM_seasonal;
-[ miroc_esm_chem_sam_f, miroc_esm_chem_sam_xi, miroc_esm_chem_mean_sam, miroc_esm_chem_std_sam, miroc_esm_chem_time_year, miroc_esm_chem_SAM_unnormalized , miroc_esm_chem_sam_trends_yrs] = MIROC_ESM_CHEM_seasonal;
-[ mri_cgcm3_sam_f     , mri_cgcm3_sam_xi     , mri_cgcm3_mean_sam     , mri_cgcm3_std_sam     , mri_cgcm3_time_year     , mri_cgcm3_SAM_unnormalized      , mri_cgcm3_sam_trends_yrs     ] = MRI_CGCM3_seasonal;
-[ mpi_esm_lr_sam_f    , mpi_esm_lr_sam_xi    , mpi_esm_lr_mean_sam    , mpi_esm_lr_std_sam    , mpi_esm_lr_time_year    , mpi_esm_lr_SAM_unnormalized     , mpi_esm_lr_sam_trends_yrs    ] = MPI_ESM_LR_seasonal;
-[ mpi_esm_mr_sam_f    , mpi_esm_mr_sam_xi    , mpi_esm_mr_mean_sam    , mpi_esm_mr_std_sam    , mpi_esm_mr_time_year    , mpi_esm_mr_SAM_unnormalized     , mpi_esm_mr_sam_trends_yrs    ] = MPI_ESM_MR_seasonal;
-[ nor_esm1m_m_sam_f   , nor_esm1m_m_sam_xi   , nor_esm1m_m_mean_sam   , nor_esm1m_m_std_sam   , nor_esm1m_m_time_year   , nor_esm1m_m_SAM_unnormalized    , nor_esm1m_m_sam_trends_yrs   ] = NOR_ESM1m_M_seasonal;
-[ nor_esm1m_me_sam_f  , nor_esm1m_me_sam_xi  , nor_esm1m_me_mean_sam  , nor_esm1m_me_std_sam  , nor_esm1m_me_time_year  , nor_esm1m_me_SAM_unnormalized   , nor_esm1m_me_sam_trends_yrs  ] = NOR_ESM1m_ME_seasonal;
+Type = 'cdf';
 
-[ cm2mc_sam_f         , cm2mc_sam_xi         , cm2mc_mean_sam         , cm2mc_std_sam         , cm2mc_time_year         , cm2mc_SAM_unnormalized ,cm2mc_sam_trends_yrs         ] = CM2Mc_seasonal;
-[ cm21_sam_f          , cm21_sam_xi          , cm21_mean_sam          , cm21_std_sam          , cm21_time_year          , cm21_SAM_unnormalized , cm21_sam_trends_yrs           ] = CM21_seasonal;
+[ can_esm2_sam_f      , can_esm2_sam_xi      , can_esm2_mean_sam      , can_esm2_std_sam      , can_esm2_time_year      , can_esm2_SAM_unnormalized       , can_esm2_sam_trends_yrs      ] = CanESM2_seasonal(Type);
+[ ccsm4_sam_f         , ccsm4_sam_xi         , ccsm4_mean_sam         , ccsm4_std_sam         , ccsm4_time_year         , ccsm4_SAM_unnormalized          , ccsm4_sam_trends_yrs         ] = CCSM4_seasonal(Type);
+[ cmcc_cesm_sam_f     , cmcc_cesm_sam_xi     , cmcc_cesm_mean_sam     , cmcc_cesm_std_sam     , cmcc_cesm_time_year     , cmcc_cesm_SAM_unnormalized      , cmcc_cesm_sam_trends_yrs     ] = CMCC_CESM_seasonal(Type);
+[ cmcc_cm_sam_f       , cmcc_cm_sam_xi       , cmcc_cm_mean_sam       , cmcc_cm_std_sam       , cmcc_cm_time_year       , cmcc_cm_SAM_unnormalized        , cmcc_cm_sam_trends_yrs       ] = CMCC_CM_seasonal(Type);
+[ cmcc_cms_sam_f      , cmcc_cms_sam_xi      , cmcc_cms_mean_sam      , cmcc_csm_std_sam      , cmcc_csm_time_year      , cmcc_csm_SAM_unnormalized       , cmcc_cms_sam_trends_yrs      ] = CMCC_CMs_seasonal(Type);
+[ cnrm_cm5_sam_f      , cnrm_cm5_sam_xi      , cnrm_cm5_mean_sam      , cnrm_cm5_std_sam      , cnrm_cm5_time_year      , cnrm_cm5_SAM_unnormalized       , cnrm_cm5_sam_trends_yrs      ] = CNRM_CM5_seasonal(Type);
+[ cnrm_cm52_sam_f     , cnrm_cm52_sam_xi     , cnrm_cm52_mean_sam     , cnrm_cm52_std_sam     , cnrm_cm52_time_year     , cnrm_cm52_SAM_unnormalized      , cnrm_cm52_sam_trends_yrs     ] = CNRM_CM52_seasonal(Type);
+[ gfdl_esm2g_sam_f    , gfdl_esm2g_sam_xi    , gfdl_esm2g_mean_sam    , gfdl_esm2g_std_sam    , gfdl_esm2g_time_year    , gfdl_esm2g_SAM_unnormalized     , gfdl_esm2g_sam_trends_yrs    ] = GFDL_ESM2G_seasonal(Type);
+[ gfdl_esm2m_sam_f    , gfdl_esm2m_sam_xi    , gfdl_esm2m_mean_sam    , gfdl_esm2m_std_sam    , gfdl_esm2m_time_year    , gfdl_esm2m_SAM_unnormalized     , gfdl_esm2m_sam_trends_yrs    ] = GFDL_ESM2M_seasonal(Type);
+[ ipsl_cm5a_lr_sam_f  , ipsl_cm5a_lr_sam_xi  , ipsl_cm5a_lr_mean_sam  , ipsl_cm5a_lr_std_sam  , ipsl_cm5a_lr_time_year  , ipsl_cm5a_lr_SAM_unnormalized   , ipsl_cm5a_lr_sam_trends_yrs  ] = IPSL_CM5a_LR_seasonal(Type);
+[ ipsl_cm5a_mr_sam_f  , ipsl_cm5a_mr_sam_xi  , ipsl_cm5a_mr_mean_sam  , ipsl_cm5a_mr_std_sam  , ipsl_cm5a_mr_time_year  , ipsl_cm5a_mr_SAM_unnormalized   , ipsl_cm5a_mr_sam_trends_yrs  ] = IPSL_CM5a_MR_seasonal(Type);
+[ ipsl_cm5b_lr_sam_f  , ipsl_cm5b_lr_sam_xi  , ipsl_cm5b_lr_mean_sam  , ipsl_cm5b_lr_std_sam  , ipsl_cm5b_lr_time_year  , ipsl_cm5b_lr_SAM_unnormalized   , ipsl_cm5b_lr_sam_trends_yrs  ] = IPSL_CM5b_LR_seasonal(Type);
+[ miroc5_sam_f        , miroc5_sam_xi        , miroc5_mean_sam        , miroc5_std_sam        , miroc5_time_year        , miroc5_SAM_unnormalized         , miroc5_sam_trends_yrs        ] = MIROC5_seasonal(Type);
+[ miroc_esm_sam_f     , miroc_esm_sam_xi     , miroc_esm_mean_sam     , miroc_esm_std_sam     , miroc_esm_time_year     , miroc_esm_SAM_unnormalized      , miroc_esm_sam_trends_yrs     ] = MIROC_ESM_seasonal(Type);
+[ miroc_esm_chem_sam_f, miroc_esm_chem_sam_xi, miroc_esm_chem_mean_sam, miroc_esm_chem_std_sam, miroc_esm_chem_time_year, miroc_esm_chem_SAM_unnormalized , miroc_esm_chem_sam_trends_yrs] = MIROC_ESM_CHEM_seasonal(Type);
+[ mri_cgcm3_sam_f     , mri_cgcm3_sam_xi     , mri_cgcm3_mean_sam     , mri_cgcm3_std_sam     , mri_cgcm3_time_year     , mri_cgcm3_SAM_unnormalized      , mri_cgcm3_sam_trends_yrs     ] = MRI_CGCM3_seasonal(Type);
+[ mpi_esm_lr_sam_f    , mpi_esm_lr_sam_xi    , mpi_esm_lr_mean_sam    , mpi_esm_lr_std_sam    , mpi_esm_lr_time_year    , mpi_esm_lr_SAM_unnormalized     , mpi_esm_lr_sam_trends_yrs    ] = MPI_ESM_LR_seasonal(Type);
+[ mpi_esm_mr_sam_f    , mpi_esm_mr_sam_xi    , mpi_esm_mr_mean_sam    , mpi_esm_mr_std_sam    , mpi_esm_mr_time_year    , mpi_esm_mr_SAM_unnormalized     , mpi_esm_mr_sam_trends_yrs    ] = MPI_ESM_MR_seasonal(Type);
+[ nor_esm1m_m_sam_f   , nor_esm1m_m_sam_xi   , nor_esm1m_m_mean_sam   , nor_esm1m_m_std_sam   , nor_esm1m_m_time_year   , nor_esm1m_m_SAM_unnormalized    , nor_esm1m_m_sam_trends_yrs   ] = NOR_ESM1m_M_seasonal(Type);
+[ nor_esm1m_me_sam_f  , nor_esm1m_me_sam_xi  , nor_esm1m_me_mean_sam  , nor_esm1m_me_std_sam  , nor_esm1m_me_time_year  , nor_esm1m_me_SAM_unnormalized   , nor_esm1m_me_sam_trends_yrs  ] = NOR_ESM1m_ME_seasonal(Type);
+
+[ cm2mc_sam_f         , cm2mc_sam_xi         , cm2mc_mean_sam         , cm2mc_std_sam         , cm2mc_time_year         , cm2mc_SAM_unnormalized ,cm2mc_sam_trends_yrs         ] = CM2Mc_seasonal(Type);
+[ cm21_sam_f          , cm21_sam_xi          , cm21_mean_sam          , cm21_std_sam          , cm21_time_year          , cm21_SAM_unnormalized , cm21_sam_trends_yrs           ] = CM21_seasonal(Type);
 
 
 % NCEP Reanalyses 

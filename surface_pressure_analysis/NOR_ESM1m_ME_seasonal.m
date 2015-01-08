@@ -1,4 +1,4 @@
-function [ sam_f, sam_xi, mean_sam, std_sam, time_year, SAM_unnormalized,sam_trends_yrs ] = NOR_ESM1m_ME_seasonal
+function [ sam_f, sam_xi, mean_sam, std_sam, time_year, SAM_unnormalized,sam_trends_yrs ] = NOR_ESM1m_ME_seasonal(Type)
 %UNTITLED Summary of this function goes here
 %   Detailed explanation goes here
 
@@ -76,7 +76,7 @@ sam_DJF = sam_DJF(:,2)';
 trend_period = 25;
 trend_length = 25;
 
-[ sam_f, sam_xi, mean_sam, std_sam,sam_trends_yrs] = SAM_Trends( time_year, sam_DJF, trend_period, trend_length );
+[ sam_f, sam_xi, mean_sam, std_sam,sam_trends_yrs] = SAM_Trends( time_year, sam_DJF, trend_period, trend_length, Type );
 
 
 
